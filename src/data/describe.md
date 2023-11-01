@@ -1,14 +1,4 @@
-<div align="center">
-<h1>Osairo🏝️</h1>
-<h3>An infinite, unstoppable, decentralized Autonomous  World!</h3>
-<p align="center">
-    <a href="./LICENSE" target="_blank">
-        <img alt="License: AGPL-3.0" src="https://img.shields.io/badge/License-AGPL_3.0-green.svg">
-    </a>
-</p>
-<img src="https://app.happiairdrop.xyz/osairo-island.png" width="900">
-</div>
-<br/>
+# Osairo Island Information
 
 **Osairo** is a Fully-On-Chain Game. Combining island management, play fun idle mining games and earn **$OIT.**
 
@@ -37,19 +27,3 @@ Benefits of Being a Osairo Contributor:
 3. Additional point rewards and privileges, with the opportunity to participate in various project activities.
 
 We wish you a wonderful journey within the Osairo community! If you encounter any issues while completing the task, feel free to reach out to our admins or community members. 🤝
-
-## Getting Started this project
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
