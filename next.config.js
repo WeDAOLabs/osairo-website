@@ -18,6 +18,7 @@ const nextConfig = {
     ],
     unoptimized: true,
   },
+  reactStrictMode: false,
   // async headers() {
   //   return [
   //     {
