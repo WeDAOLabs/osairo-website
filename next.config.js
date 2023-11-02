@@ -11,7 +11,12 @@ const nextConfig = {
         protocol: "https",
         hostname: "img.shields.io",
       },
+      {
+        protocol: "https",
+        hostname: "osairo.xyz",
+      },
     ],
+    unoptimized: true,
   },
   // async headers() {
   //   return [
