@@ -47,7 +47,7 @@ export default function Home() {
         >
           <Image
             alt="osairo world"
-            src="https://app.happiairdrop.xyz/osairo-island.png"
+            src="https://app.happiairdrop.xyz/osairo-island.png/?"
             width={600}
             height={600}
           />
