@@ -18,7 +18,14 @@ export default function Home() {
 
   return (
     <>
-      <h1>{tip}</h1>
+      <h1
+        style={{
+          fontSize: 30,
+          color: "green",
+        }}
+      >
+        {tip}
+      </h1>
       <br />
       <button onClick={onSetTip}>Click me!</button>
       <br />
