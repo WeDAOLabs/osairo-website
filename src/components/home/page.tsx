@@ -12,44 +12,63 @@ import HomePage3 from "./home.page.3";
 import HomePage4 from "./home.page.4";
 import HomePage5 from "./home.page.5";
 import HomePage6 from "./home.page.6";
+import TitleBar from "@/components/title-bar/title-bar";
+import { EventBus } from "@/plugins/event.bus";
+import { EventPageSlide } from "@/events/event.page.slide";
 
 export default function Home() {
+  const onSwiper = (swiper: any) => {
+    console.log("swiper init", swiper);
+  };
+
+  const onSlideChange = (swiper: any) => {
+    EventBus.instance.emit(EventPageSlide.event, swiper.realIndex);
+  };
+
   return (
-    <Swiper
-      direction={"vertical"}
-      spaceBetween={10}
-      mousewheel={true}
-      modules={[Mousewheel]}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
-      pagination={false}
-      autoHeight={true}
-      speed={500}
+    <div
       style={{
-        height: "100vh",
+        width: "100%",
+        height: "100%",
       }}
     >
-      <SwiperSlide>
-        <HomePage0 />
-      </SwiperSlide>
-      <SwiperSlide>
-        <HomePage1 />
-      </SwiperSlide>
-      <SwiperSlide>
-        <HomePage2 />
-      </SwiperSlide>
-      <SwiperSlide>
-        <HomePage3 />
-      </SwiperSlide>
-      <SwiperSlide>
-        <HomePage4 />
-      </SwiperSlide>
-      <SwiperSlide>
-        <HomePage5 />
-      </SwiperSlide>
-      <SwiperSlide>
-        <HomePage6 />
-      </SwiperSlide>
-    </Swiper>
+      <Swiper
+        direction={"vertical"}
+        spaceBetween={10}
+        mousewheel={true}
+        modules={[Mousewheel]}
+        onSlideChange={onSlideChange}
+        onSwiper={onSwiper}
+        pagination={false}
+        autoHeight={true}
+        speed={500}
+        style={{
+          height: "100vh",
+        }}
+      >
+        <SwiperSlide>
+          <HomePage0 />
+        </SwiperSlide>
+        <SwiperSlide>
+          <HomePage1 />
+        </SwiperSlide>
+        <SwiperSlide>
+          <HomePage2 />
+        </SwiperSlide>
+        <SwiperSlide>
+          <HomePage3 />
+        </SwiperSlide>
+        <SwiperSlide>
+          <HomePage4 />
+        </SwiperSlide>
+        <SwiperSlide>
+          <HomePage5 />
+        </SwiperSlide>
+        <SwiperSlide>
+          <HomePage6 />
+        </SwiperSlide>
+      </Swiper>
+      <TitleBar />
+    </div>
   );
 }
