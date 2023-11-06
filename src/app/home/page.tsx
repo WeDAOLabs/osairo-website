@@ -18,18 +18,29 @@ export default function Home() {
 
   return (
     <>
-      <h1
+      <div
         style={{
-          fontSize: 30,
-          color: "green",
+          display: "flex",
+          flexDirection: "column",
+          height: "100vh",
+          justifyItems: "center",
+          alignItems: "center",
         }}
       >
-        {tip}
-      </h1>
-      <br />
-      <button onClick={onSetTip}>Click me!</button>
-      <br />
-      <Sample tip="Stone"></Sample>
+        <h1
+          style={{
+            fontSize: 26,
+            color: "green",
+            marginTop: 200,
+          }}
+        >
+          {tip}
+        </h1>
+        <br />
+        <button onClick={onSetTip}>Click me!</button>
+        <br />
+        <Sample tip="Stone"></Sample>
+      </div>
     </>
   );
 }
