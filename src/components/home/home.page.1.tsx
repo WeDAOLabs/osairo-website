@@ -1,6 +1,6 @@
 import mainStyle from "@/styles/main.module.css";
 
-export default function HomePage0() {
+export default function HomePage1() {
   return (
     <>
       <div
@@ -8,7 +8,7 @@ export default function HomePage0() {
         style={{
           justifyContent: "center",
           alignItems: "center",
-          background: "#282e28",
+          background: "#dbeecd",
         }}
       >
         <h1
@@ -16,7 +16,7 @@ export default function HomePage0() {
             fontSize: 30,
           }}
         >
-          HomePage0
+          HomePage1
         </h1>
       </div>
     </>
