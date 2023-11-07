@@ -1,5 +1,6 @@
 import mainStyle from "@/styles/main.module.css";
 import panelStyle from "./page.module.css";
+import TxtMenuItem from "../txt-menu/txt-menu-item";
 
 export default function HomePage1() {
   return (
@@ -22,8 +23,7 @@ export default function HomePage1() {
             className={panelStyle.panelCircleContainer}
             style={{
               background: "#dbeecd",
-              display: "grid",
-              gridTemplateColumns: "44% 56%",
+              display: "flex",
             }}
           >
             <div
@@ -32,6 +32,8 @@ export default function HomePage1() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                flex: "44%",
+                maxWidth: "44%",
               }}
             >
               <div
@@ -82,7 +84,94 @@ export default function HomePage1() {
                 </text>
               </div>
             </div>
-            <div className="right"></div>
+            <div
+              className="right"
+              style={{
+                flex: "56%",
+                maxWidth: "56%",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <div
+                className={`right-top ${mainStyle.flexCenter}`}
+                style={{
+                  flex: "30%",
+                }}
+              >
+                <text
+                  style={{
+                    width: 716,
+                    height: 130,
+
+                    fontFamily: "Arial Black",
+                    fontStyle: "normal",
+                    fontWeight: 900,
+                    fontSize: 38,
+
+                    color: "#555c50",
+
+                    left: 39,
+                    top: 295,
+                  }}
+                >
+                  Osairo is not just a game but also a microcosm of the economy.
+                </text>
+              </div>
+              <div
+                className={`right-middle ${mainStyle.flexCenter}`}
+                style={{
+                  flex: "50%",
+                }}
+              ></div>
+              <div
+                className={`right-bottom ${mainStyle.flexCenter}`}
+                style={{
+                  flex: "20%",
+                }}
+              >
+                <div
+                  style={{
+                    width: 446,
+                    height: 58,
+                    display: "flex",
+                  }}
+                >
+                  <div
+                    className="left-btn"
+                    style={{
+                      flex: "50%",
+                      maxWidth: "50%",
+                      position: "relative",
+                    }}
+                  >
+                    <TxtMenuItem
+                      txt="OIT MINT"
+                      onClick={() => {
+                        console.log("oit mint");
+                      }}
+                    />
+                  </div>
+                  <div
+                    className="right-btn"
+                    style={{
+                      flex: "50%",
+                      maxWidth: "50%",
+                      position: "relative",
+                      display: "flex",
+                      justifyContent: "flex-end",
+                    }}
+                  >
+                    <TxtMenuItem
+                      txt="ETH MINT"
+                      onClick={() => {
+                        console.log("eth mint");
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
