@@ -1,0 +1,14 @@
+.mediaIconBg {
+  position: relative;
+  width: 70px;
+  height: 70px;
+
+  background: #FFEBBB;
+  border-radius: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
