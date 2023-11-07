@@ -2,7 +2,7 @@
 import titleMenuItemStyle from "./title-menu.module.css";
 
 export interface ITitleMenuItem {
-  key: string | number;
+  index: string | number;
   txt: string;
   onClick: Function | undefined;
   selected: boolean | undefined;

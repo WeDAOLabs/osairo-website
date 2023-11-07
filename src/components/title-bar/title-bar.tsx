@@ -8,39 +8,58 @@ import TitleMenuItem, { ITitleMenuItem } from "../title-menu/title-menu-item";
 import titleBarModule from "./title-bar.module.css";
 import titleMenuItemStyle from "../title-menu/title-menu.module.css";
 
+const TITLE_ITEM_COMMUNITY = "COMMUNITY";
+const TITLE_ITEM_ECONOMY = "ECONOMY";
+const TITLE_ITEM_ROADMAP = "ROADMAP";
+const TITLE_ITEM_EARN = "EARN";
+const TITLE_ITEM_WHITEPAPER = "WHITEPAPER";
+
 export default function TitleBar() {
   const onMenuItemClicked = (item: ITitleMenuItem) => {
-    console.log("idx", item);
+    changeMenuItemState(item);
+
+    switch (item.txt) {
+      case TITLE_ITEM_COMMUNITY:
+        break;
+      case TITLE_ITEM_ECONOMY:
+        break;
+      case TITLE_ITEM_ROADMAP:
+        break;
+      case TITLE_ITEM_EARN:
+        break;
+      case TITLE_ITEM_WHITEPAPER:
+        break;
+    }
   };
 
   const TitleMenuItems: ITitleMenuItem[] = [
     {
-      key: 0,
-      txt: "COMMUNITY",
+      index: 0,
+      txt: TITLE_ITEM_COMMUNITY,
       selected: true,
       onClick: onMenuItemClicked,
     },
     {
-      key: 1,
-      txt: "ECONOMY",
+      index: 1,
+      txt: TITLE_ITEM_ECONOMY,
       selected: false,
       onClick: onMenuItemClicked,
     },
     {
-      key: 2,
-      txt: "ROADMAP",
+      index: 2,
+      txt: TITLE_ITEM_ROADMAP,
       selected: false,
       onClick: onMenuItemClicked,
     },
     {
-      key: 3,
-      txt: "EARN",
+      index: 3,
+      txt: TITLE_ITEM_EARN,
       selected: false,
       onClick: onMenuItemClicked,
     },
     {
-      key: 4,
-      txt: "WHITEPAPER",
+      index: 4,
+      txt: TITLE_ITEM_WHITEPAPER,
       selected: false,
       onClick: onMenuItemClicked,
     },
@@ -61,6 +80,14 @@ export default function TitleBar() {
   };
 
   const onTitleImageClicked = () => {};
+
+  const changeMenuItemState = (item: ITitleMenuItem) => {
+    const newItems = menuItems.map((it) => {
+      it.selected = it.index === item.index;
+      return it;
+    });
+    setMenuItems(newItems);
+  };
 
   return (
     <>
@@ -91,7 +118,7 @@ export default function TitleBar() {
             const posX = 170 + key * 144;
             return (
               <div
-                key={item.key}
+                key={item.index}
                 className={titleMenuItemStyle.titleMenuItemStyle}
                 style={{
                   position: "absolute",
@@ -100,7 +127,7 @@ export default function TitleBar() {
                 }}
               >
                 <TitleMenuItem
-                  key={`${item.key}_${item.txt}`}
+                  index={item.index}
                   txt={item.txt}
                   onClick={item.onClick}
                   selected={item.selected}
