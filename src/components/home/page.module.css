@@ -3,3 +3,9 @@
   height: 900px;
   position: relative;
 }
+
+.panelCircleContainer {
+  width: 1420px;
+  height: 900px;
+  border-radius: 30px;
+}

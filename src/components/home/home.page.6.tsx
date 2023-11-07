@@ -1,4 +1,5 @@
 import mainStyle from "@/styles/main.module.css";
+import panelStyle from "./page.module.css";
 
 export default function HomePage6() {
   return (
@@ -8,16 +9,22 @@ export default function HomePage6() {
         style={{
           justifyContent: "center",
           alignItems: "center",
-          background: "#3b3e3a",
         }}
       >
-        <h1
+        <div
+          className={panelStyle.panelContainer}
           style={{
-            fontSize: 30,
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
-          HomePage6
-        </h1>
+          <div
+            className={panelStyle.panelCircleContainer}
+            style={{
+              background: "#383e3a",
+            }}
+          ></div>
+        </div>
       </div>
     </>
   );

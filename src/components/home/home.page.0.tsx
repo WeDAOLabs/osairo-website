@@ -29,17 +29,9 @@ export default function HomePage0() {
         style={{
           justifyContent: "center",
           alignItems: "center",
-          background: "#282e28",
         }}
       >
-        <div
-          className={panelStyle.panelContainer}
-          // style={{
-          //   display: "flex",
-          //   justifyContent: "center",
-          //   alignItems: "center",
-          // }}
-        >
+        <div className={panelStyle.panelContainer}>
           <Image
             src="/homepage-bg.png"
             width={1440}
