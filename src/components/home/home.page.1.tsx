@@ -1,8 +1,29 @@
 import mainStyle from "@/styles/main.module.css";
 import panelStyle from "./page.module.css";
 import TxtMenuItem from "../txt-menu/txt-menu-item";
+import "swiper/css";
+import "swiper/react";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, EffectCoverflow } from "swiper/modules";
+import Image from "next/image";
 
 export default function HomePage1() {
+  const TileImages = [
+    {
+      src: "/tile_0.png",
+      size: [726 / 2, 818 / 2],
+    },
+    {
+      src: "/tile_1.png",
+      size: [726 / 2, 818 / 2],
+    },
+    {
+      src: "/tile_2.png",
+      size: [726 / 2, 818 / 2],
+    },
+  ];
+
   return (
     <>
       <div
@@ -123,7 +144,38 @@ export default function HomePage1() {
                 style={{
                   flex: "50%",
                 }}
-              ></div>
+              >
+                <Swiper
+                  effect={`coverflow`}
+                  slidesPerView={3}
+                  centeredSlides={true}
+                  grabCursor={true}
+                  coverflowEffect={{
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 400,
+                    modifier: 1,
+                    slideShadows: true,
+                  }}
+                  navigation={true}
+                  modules={[Navigation, EffectCoverflow]}
+                  // loop
+                  style={{
+                    width: 754,
+                  }}
+                >
+                  {TileImages.map((tile: any, k: number) => (
+                    <SwiperSlide key={k}>
+                      <Image
+                        src={tile.src}
+                        alt="land nft"
+                        width={tile.size[0]}
+                        height={tile.size[1]}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
               <div
                 className={`right-bottom ${mainStyle.flexCenter}`}
                 style={{
