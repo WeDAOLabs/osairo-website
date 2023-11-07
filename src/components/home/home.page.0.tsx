@@ -1,10 +1,30 @@
+"use client";
+
 import Image from "next/image";
 import MediaIcon from "../media-icon/media-icon";
 import mainStyle from "@/styles/main.module.css";
 import panelStyle from "./page.module.css";
 import { LINK_DISCORD, LINK_X } from "@/const/game";
+import { useEffect, useState } from "react";
 
 export default function HomePage0() {
+  const [screenHeight, setScreenHeight] = useState(900);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenHeight(window.innerHeight >= 900 ? 900 : window.innerHeight);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    // 在组件卸载时移除事件监听器
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const MediaIcons = [
     {
       txt: "x",
@@ -34,14 +54,14 @@ export default function HomePage0() {
         <div className={panelStyle.panelContainer}>
           <Image
             src="/homepage-bg.png"
-            width={1440}
-            height={900}
+            width={1440 * (screenHeight / 900)}
+            height={screenHeight}
             alt="osairo world"
           />
           <Image
             src="/homepage-txt.png"
-            width={849}
-            height={391}
+            width={849 * (screenHeight / 900)}
+            height={391 * (screenHeight / 900)}
             alt="osairo world"
             style={{
               position: "absolute",
