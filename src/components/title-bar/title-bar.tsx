@@ -8,6 +8,7 @@ import TitleMenuItem, { ITitleMenuItem } from "../title-menu/title-menu-item";
 import titleBarModule from "./title-bar.module.css";
 import titleMenuItemStyle from "../title-menu/title-menu.module.css";
 import { LINK_WHITEPAPER } from "@/const/game";
+import { EventPushSwiperSlide } from "@/events/event.push.swiper.slide";
 
 const TITLE_ITEM_COMMUNITY = "COMMUNITY";
 const TITLE_ITEM_ECONOMY = "ECONOMY";
@@ -25,6 +26,7 @@ export default function TitleBar() {
       case TITLE_ITEM_ECONOMY:
         break;
       case TITLE_ITEM_ROADMAP:
+        EventBus.instance.emit(EventPushSwiperSlide.event, 4);
         break;
       case TITLE_ITEM_EARN:
         break;
@@ -81,7 +83,10 @@ export default function TitleBar() {
     console.log("slide is changed to", idx);
   };
 
-  const onTitleImageClicked = () => {};
+  const onTitleImageClicked = () => {
+    EventBus.instance.emit(EventPushSwiperSlide.event, 0);
+    changeMenuItemState(TitleMenuItems[0]);
+  };
 
   const changeMenuItemState = (item: ITitleMenuItem) => {
     const newItems = menuItems.map((it) => {
@@ -113,6 +118,7 @@ export default function TitleBar() {
               position: "absolute",
               top: 6,
               left: 26,
+              cursor: "pointer",
             }}
             onClick={onTitleImageClicked}
           />

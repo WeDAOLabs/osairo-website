@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,15 +15,33 @@ import HomePage6 from "./home.page.6";
 import TitleBar from "@/components/title-bar/title-bar";
 import { EventBus } from "@/plugins/event.bus";
 import { EventPageSlide } from "@/events/event.page.slide";
+import { EventPushSwiperSlide } from "@/events/event.push.swiper.slide";
 
 export default function Home() {
+  let swiperObj: any = null;
+
   const onSwiper = (swiper: any) => {
-    console.log("swiper init", swiper);
+    swiperObj = swiper;
   };
 
   const onSlideChange = (swiper: any) => {
     EventBus.instance.emit(EventPageSlide.event, swiper.realIndex);
   };
+
+  const onPushSwiperSlide = (idx: any) => {
+    if (!swiperObj) {
+      return;
+    }
+    swiperObj.slideTo(idx, 0);
+  };
+
+  useEffect(() => {
+    EventBus.instance.on(EventPushSwiperSlide.event, onPushSwiperSlide);
+
+    return () => {
+      EventBus.instance.off(EventPushSwiperSlide.event, onPushSwiperSlide);
+    };
+  }, []);
 
   return (
     <div
