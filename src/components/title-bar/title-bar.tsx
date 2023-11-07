@@ -7,6 +7,7 @@ import { EventPageSlide } from "@/events/event.page.slide";
 import TitleMenuItem, { ITitleMenuItem } from "../title-menu/title-menu-item";
 import titleBarModule from "./title-bar.module.css";
 import titleMenuItemStyle from "../title-menu/title-menu.module.css";
+import { LINK_WHITEPAPER } from "@/const/game";
 
 const TITLE_ITEM_COMMUNITY = "COMMUNITY";
 const TITLE_ITEM_ECONOMY = "ECONOMY";
@@ -28,6 +29,7 @@ export default function TitleBar() {
       case TITLE_ITEM_EARN:
         break;
       case TITLE_ITEM_WHITEPAPER:
+        window.open(LINK_WHITEPAPER, "_blank");
         break;
     }
   };
