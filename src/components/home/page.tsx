@@ -52,7 +52,7 @@ export default function Home() {
     >
       <Swiper
         direction={"vertical"}
-        spaceBetween={10}
+        spaceBetween={0}
         mousewheel={true}
         modules={[Mousewheel]}
         onSlideChange={onSlideChange}
