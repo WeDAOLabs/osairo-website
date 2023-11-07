@@ -11,4 +11,11 @@
   align-items: center;
 
   cursor: pointer;
+
+  transition: transform 0.3s;
+  transform: scale(1);
+}
+
+.mediaIconBg:hover {
+  transform: scale(1.1);
 }

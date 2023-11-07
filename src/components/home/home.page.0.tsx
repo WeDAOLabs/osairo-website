@@ -2,17 +2,22 @@ import Image from "next/image";
 import MediaIcon from "../media-icon/media-icon";
 import mainStyle from "@/styles/main.module.css";
 import panelStyle from "./page.module.css";
+import { LINK_DISCORD, LINK_X } from "@/const/game";
 
 export default function HomePage0() {
   const MediaIcons = [
     {
       txt: "x",
-      onClick: () => {},
+      onClick: () => {
+        window.open(LINK_X, "_blank");
+      },
       size: [43.5, 35],
     },
     {
       txt: "discord",
-      onClick: () => {},
+      onClick: () => {
+        window.open(LINK_DISCORD, "_blank");
+      },
       size: [44, 33],
     },
   ];
