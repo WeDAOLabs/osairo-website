@@ -51,7 +51,7 @@ export default function HomePage0() {
           alignItems: "center",
         }}
       >
-        <div className={panelStyle.panelContainer}>
+        <div className={`${panelStyle.panelContainer} ${mainStyle.flexCenter}`}>
           <Image
             src="/homepage-bg.png"
             width={1440 * (screenHeight / 900)}
