@@ -8,20 +8,24 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectCoverflow } from "swiper/modules";
 import Image from "next/image";
 import PageFitter from "../page-fitter/page-fitter";
+import { toast } from "react-toastify";
 
 export default function HomePage1() {
   const TileImages = [
     {
       src: "/tile_0.png",
       size: [726 / 2, 818 / 2],
+      onClick: () => toast.info("coming soon!"),
     },
     {
       src: "/tile_1.png",
       size: [726 / 2, 818 / 2],
+      onClick: () => toast.info("coming soon!"),
     },
     {
       src: "/tile_2.png",
       size: [726 / 2, 818 / 2],
+      onClick: () => toast.info("coming soon!"),
     },
   ];
 
@@ -203,7 +207,7 @@ export default function HomePage1() {
                       <TxtMenuItem
                         txt="OIT MINT"
                         onClick={() => {
-                          console.log("oit mint");
+                          toast.info("coming soon!");
                         }}
                       />
                     </div>
@@ -220,7 +224,7 @@ export default function HomePage1() {
                       <TxtMenuItem
                         txt="ETH MINT"
                         onClick={() => {
-                          console.log("eth mint");
+                          toast.info("coming soon!");
                         }}
                       />
                     </div>

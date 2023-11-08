@@ -9,6 +9,7 @@ import titleBarModule from "./title-bar.module.css";
 import titleMenuItemStyle from "../title-menu/title-menu.module.css";
 import { LINK_WHITEPAPER } from "@/const/game";
 import { EventPushSwiperSlide } from "@/events/event.push.swiper.slide";
+import PageFitter from "../page-fitter/page-fitter";
 
 const TITLE_ITEM_COMMUNITY = "COMMUNITY";
 const TITLE_ITEM_ECONOMY = "ECONOMY";
@@ -98,53 +99,55 @@ export default function TitleBar() {
 
   return (
     <>
-      <div className={titleBarModule.titleBar}>
-        <div
-          style={{
-            width: 923,
-            height: 70,
-            background: "#ffebbb",
-            borderRadius: 50,
-            marginTop: 30,
-            position: "relative",
-          }}
-        >
-          <Image
-            alt="osairo logo"
-            src="/title-logo.png"
-            width={142}
-            height={51}
+      <PageFitter>
+        <div className={titleBarModule.titleBar}>
+          <div
             style={{
-              position: "absolute",
-              top: 6,
-              left: 26,
-              cursor: "pointer",
+              width: 923,
+              height: 70,
+              background: "#ffebbb",
+              borderRadius: 50,
+              marginTop: 30,
+              position: "relative",
             }}
-            onClick={onTitleImageClicked}
-          />
-          {menuItems.map((item: ITitleMenuItem, key: number) => {
-            const posX = 170 + key * 144;
-            return (
-              <div
-                key={item.index}
-                className={titleMenuItemStyle.titleMenuItemStyle}
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: posX,
-                }}
-              >
-                <TitleMenuItem
-                  index={item.index}
-                  txt={item.txt}
-                  onClick={item.onClick}
-                  selected={item.selected}
-                />
-              </div>
-            );
-          })}
+          >
+            <Image
+              alt="osairo logo"
+              src="/title-logo.png"
+              width={142}
+              height={51}
+              style={{
+                position: "absolute",
+                top: 6,
+                left: 26,
+                cursor: "pointer",
+              }}
+              onClick={onTitleImageClicked}
+            />
+            {menuItems.map((item: ITitleMenuItem, key: number) => {
+              const posX = 170 + key * 144;
+              return (
+                <div
+                  key={item.index}
+                  className={titleMenuItemStyle.titleMenuItemStyle}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: posX,
+                  }}
+                >
+                  <TitleMenuItem
+                    index={item.index}
+                    txt={item.txt}
+                    onClick={item.onClick}
+                    selected={item.selected}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
+      </PageFitter>
     </>
   );
 }

@@ -6,11 +6,15 @@ export interface ITxtMenuItem {
   onClick?: Function;
 }
 export default function TxtMenuItem(props: ITxtMenuItem) {
+  const onItemClicked = () => {
+    props.onClick ? props.onClick() : null;
+  };
+
   return (
     <>
       <div
         className={`${txtMenuStyle.txtMenuItem} ${mainStyle.flexCenter}`}
-        onClick={props.onClick ? props.onClick() : null}
+        onClick={onItemClicked}
       >
         <label className={txtMenuStyle.txtMenuItemLabel}>{props.txt}</label>
       </div>
