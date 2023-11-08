@@ -4,6 +4,8 @@ import txtMenuStyle from "./txt-menu.module.css";
 export interface ITxtMenuItem {
   txt: string;
   onClick?: Function;
+  bgColor?: string;
+  txtColor?: string;
 }
 export default function TxtMenuItem(props: ITxtMenuItem) {
   const onItemClicked = () => {
@@ -15,8 +17,18 @@ export default function TxtMenuItem(props: ITxtMenuItem) {
       <div
         className={`${txtMenuStyle.txtMenuItem} ${mainStyle.flexCenter}`}
         onClick={onItemClicked}
+        style={{
+          background: props?.bgColor ? props?.bgColor : "#555C50",
+        }}
       >
-        <label className={txtMenuStyle.txtMenuItemLabel}>{props.txt}</label>
+        <label
+          className={txtMenuStyle.txtMenuItemLabel}
+          style={{
+            color: props?.txtColor ? props?.txtColor : "white",
+          }}
+        >
+          {props.txt}
+        </label>
       </div>
     </>
   );
