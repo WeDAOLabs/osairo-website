@@ -1,20 +1,49 @@
+"use client";
 import mainStyle from "@/styles/main.module.css";
 import panelStyle from "./page.module.css";
 import PageFitter from "../page-fitter/page-fitter";
 import TxtMenuItem from "../txt-menu/txt-menu-item";
 import { LINK_DISCORD } from "@/const/game";
+import { useEffect, useState } from "react";
+import { EventBus } from "@/plugins/event.bus";
+import { EventPageSlide } from "@/events/event.page.slide";
+import { getMinScreenScale } from "@/plugins/screen.fitter";
 
 export default function HomePage5() {
+  const [topPos, setTopPos] = useState(0);
+
+  const onPushSwiperSlide = (idx: any) => {
+    if (idx <= 5) {
+      setTopPos(0);
+    } else {
+      let scale = getMinScreenScale();
+
+      setTopPos(560 * Math.min(1, scale));
+    }
+  };
+
+  useEffect(() => {
+    EventBus.instance.on(EventPageSlide.event, onPushSwiperSlide);
+
+    return () => {
+      EventBus.instance.off(EventPageSlide.event, onPushSwiperSlide);
+    };
+  }, []);
+
   return (
     <>
-      <PageFitter>
-        <div
-          className={mainStyle.containerFullPage}
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+      <div
+        className={mainStyle.containerFullPage}
+        style={{
+          justifyContent: "center",
+          alignItems: "center",
+          position: "absolute",
+          width: "100vw",
+          left: 0,
+          top: topPos,
+        }}
+      >
+        <PageFitter>
           <div
             className={panelStyle.panelContainer}
             style={{
@@ -133,8 +162,8 @@ export default function HomePage5() {
               </div>
             </div>
           </div>
-        </div>
-      </PageFitter>
+        </PageFitter>
+      </div>
     </>
   );
 }

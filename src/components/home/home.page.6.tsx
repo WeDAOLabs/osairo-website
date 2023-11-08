@@ -6,7 +6,7 @@ export default function HomePage6() {
   return (
     <>
       <PageFitter>
-        <div
+        {/* <div
           className={mainStyle.containerFullPage}
           style={{
             justifyContent: "center",
@@ -27,7 +27,17 @@ export default function HomePage6() {
               }}
             ></div>
           </div>
-        </div>
+        </div> */}
+        <div
+          style={{
+            display: "flex",
+            height: 560,
+            position: "absolute",
+            top: 560,
+            left: 0,
+            width: "100vw",
+          }}
+        ></div>
       </PageFitter>
     </>
   );

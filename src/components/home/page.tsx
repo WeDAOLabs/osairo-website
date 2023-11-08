@@ -26,7 +26,7 @@ export default function Home() {
   };
 
   const onSlideChange = (swiper: any) => {
-    EventBus.instance.emit(EventPageSlide.event, swiper.realIndex);
+    EventBus.instance.emit(EventPageSlide.event, swiper.realIndex, swiper);
   };
 
   const onPushSwiperSlide = (idx: any) => {
