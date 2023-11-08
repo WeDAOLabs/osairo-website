@@ -2,6 +2,7 @@
 import panelStyle from "./page.module.css";
 import PageFitter from "../page-fitter/page-fitter";
 import Image from "next/image";
+import { LINK_GITHUB, LINK_WHITEPAPER } from "@/const/game";
 
 export default function HomePage6() {
   return (
@@ -78,6 +79,81 @@ export default function HomePage6() {
                 left: 1178,
               }}
             />
+            <div
+              className="learn-more"
+              style={{
+                position: "absolute",
+                width: 215,
+                height: 122,
+                left: 97,
+                top: 328,
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <label
+                style={{
+                  width: 78,
+                  height: 10,
+
+                  fontFamily: "Arial Hebrew",
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  fontSize: 14,
+
+                  color: "#AFB2B0",
+                }}
+              >
+                Learn More
+              </label>
+              <label
+                className={panelStyle.labelWithLink}
+                style={{
+                  width: 215,
+                  height: 30,
+
+                  fontFamily: "Arial Hebrew",
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  fontSize: 26,
+                  color: "white",
+
+                  marginTop: 15,
+                  marginLeft: -4,
+                }}
+                onClick={() => window.open(LINK_GITHUB, "_blank")}
+              >
+                GitHub
+              </label>
+              <label
+                className={panelStyle.labelWithLink}
+                style={{
+                  width: 215,
+                  height: 30,
+
+                  fontFamily: "Arial Hebrew",
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  fontSize: 26,
+                  color: "white",
+                  marginTop: 6,
+                  marginLeft: -4,
+                }}
+                onClick={() => window.open(LINK_WHITEPAPER, "_blank")}
+              >
+                Whitepaper
+              </label>
+            </div>
+            <div
+              className="follow-us"
+              style={{
+                position: "absolute",
+                width: 93,
+                height: 79,
+                left: 312,
+                top: 328,
+              }}
+            ></div>
           </div>
         </div>
       </PageFitter>

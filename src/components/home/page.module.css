@@ -9,3 +9,11 @@
   height: 900px;
   border-radius: 30px;
 }
+
+.labelWithLink {
+  cursor: pointer;
+}
+
+.labelWithLink:hover {
+  text-decoration: underline;
+}
