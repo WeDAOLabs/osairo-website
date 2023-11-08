@@ -125,7 +125,7 @@ export default function HomePage5() {
                     color: "white",
 
                     top: 65,
-                    left: 40,
+                    left: 60,
                   }}
                 >
                   Welcome to our community
