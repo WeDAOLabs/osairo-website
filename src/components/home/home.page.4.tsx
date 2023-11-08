@@ -24,8 +24,28 @@ export default function HomePage4() {
               className={panelStyle.panelCircleContainer}
               style={{
                 background: "#fbeedd",
+                position: "relative",
               }}
-            ></div>
+            >
+              <label
+                style={{
+                  position: "absolute",
+                  width: 327,
+                  height: 85,
+
+                  fontFamily: "Arial Black",
+                  fontStyle: "normal",
+                  fontWeight: 900,
+                  fontSize: 60,
+                  color: "white",
+
+                  left: 87,
+                  top: 62,
+                }}
+              >
+                Roadmap
+              </label>
+            </div>
           </div>
         </div>
       </PageFitter>
