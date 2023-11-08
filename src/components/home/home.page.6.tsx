@@ -1,3 +1,5 @@
+"use client";
+
 // import mainStyle from "@/styles/main.module.css";
 import panelStyle from "./page.module.css";
 import PageFitter from "../page-fitter/page-fitter";
@@ -8,12 +10,16 @@ import {
   LINK_WHITEPAPER,
   LINK_X,
 } from "@/const/game";
+import { useState } from "react";
+import { getMinScreenScale } from "@/plugins/screen.fitter";
 
 export default function HomePage6() {
+  const [topPos, setTopPos] = useState(560 * Math.min(1, getMinScreenScale()));
+  const [scale, setScale] = useState(getMinScreenScale());
+
   return (
     <>
-      <PageFitter>
-        {/* <div
+      {/* <div
           className={mainStyle.containerFullPage}
           style={{
             justifyContent: "center",
@@ -35,18 +41,19 @@ export default function HomePage6() {
             ></div>
           </div>
         </div> */}
-        <div
-          style={{
-            display: "flex",
-            height: 560,
-            position: "absolute",
-            top: 560,
-            left: 0,
-            width: "100vw",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+      <div
+        style={{
+          display: "flex",
+          height: topPos,
+          position: "absolute",
+          top: topPos,
+          left: 0,
+          width: "100vw",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <PageFitter>
           <div
             style={{
               width: 1420,
@@ -68,7 +75,7 @@ export default function HomePage6() {
                 color: "#FFEBBB",
 
                 left: 97,
-                top: 46,
+                top: 46 * scale,
               }}
             >
               Osairo Adventure game
@@ -80,7 +87,7 @@ export default function HomePage6() {
               alt="osairo"
               style={{
                 position: "absolute",
-                top: 329,
+                top: 329 * scale - 50,
                 left: 1178,
               }}
             />
@@ -91,7 +98,7 @@ export default function HomePage6() {
                 width: 215,
                 height: 122,
                 left: 97,
-                top: 328,
+                top: 328 * scale - 50,
                 display: "flex",
                 flexDirection: "column",
               }}
@@ -156,7 +163,7 @@ export default function HomePage6() {
                 width: 93,
                 height: 79,
                 left: 312,
-                top: 328,
+                top: 328 * scale - 50,
                 display: "flex",
                 flexDirection: "column",
               }}
@@ -215,8 +222,8 @@ export default function HomePage6() {
               </label>
             </div>
           </div>
-        </div>
-      </PageFitter>
+        </PageFitter>
+      </div>
     </>
   );
 }
