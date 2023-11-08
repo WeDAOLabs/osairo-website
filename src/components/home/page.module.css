@@ -2,18 +2,10 @@
   width: 1440px;
   height: 900px;
   position: relative;
-
-  @media (max-height: var(--height)) {
-    width: calc(var(--height) * var(--width-ratio)); 
-  }
 }
 
 .panelCircleContainer {
   width: 1420px;
   height: 900px;
   border-radius: 30px;
-
-  @media (max-height: var(--height)) {
-    width: calc(var(--height) * var(--width-ratio)); 
-  }
 }

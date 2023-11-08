@@ -16,6 +16,7 @@ import TitleBar from "@/components/title-bar/title-bar";
 import { EventBus } from "@/plugins/event.bus";
 import { EventPageSlide } from "@/events/event.page.slide";
 import { EventPushSwiperSlide } from "@/events/event.push.swiper.slide";
+import PageFitter from "../page-fitter/page-fitter";
 
 export default function Home() {
   let swiperObj: any = null;
