@@ -23,7 +23,8 @@ export default function HomePage2() {
             <div
               className={panelStyle.panelCircleContainer}
               style={{
-                background: "#d1dcfe",
+                background:
+                  "linear-gradient(111.36deg, #374B64 0.75%, #C6CEE1 100%, #C6CEE1 100%)",
                 display: "flex",
               }}
             >
