@@ -16,7 +16,7 @@ import TitleBar from "@/components/title-bar/title-bar";
 import { EventBus } from "@/plugins/event.bus";
 import { EventPageSlide } from "@/events/event.page.slide";
 import { EventPushSwiperSlide } from "@/events/event.push.swiper.slide";
-import PageFitter from "../page-fitter/page-fitter";
+import { getMinScreenScale } from "@/plugins/screen.fitter";
 
 export default function Home() {
   let swiperObj: any = null;
@@ -36,7 +36,14 @@ export default function Home() {
     swiperObj.slideTo(idx, 0);
   };
 
+  const [spaceBetween, setSpaceBetween] = useState(0);
+
   useEffect(() => {
+    const scale = getMinScreenScale();
+    if (scale < 1) {
+      setSpaceBetween(10);
+    }
+
     EventBus.instance.on(EventPushSwiperSlide.event, onPushSwiperSlide);
 
     return () => {
@@ -53,7 +60,7 @@ export default function Home() {
     >
       <Swiper
         direction={"vertical"}
-        spaceBetween={0}
+        spaceBetween={spaceBetween}
         mousewheel={true}
         modules={[Mousewheel]}
         onSlideChange={onSlideChange}

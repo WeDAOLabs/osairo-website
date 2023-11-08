@@ -1,14 +1,13 @@
 "use client";
 
+import { getMinScreenScale } from "@/plugins/screen.fitter";
 import React, { useEffect, cloneElement, useState } from "react";
 
 export default function PageFitter(props: any) {
   const [components, setComponents] = useState(props.children);
 
   const resizePage = () => {
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
-    let scale = Math.min(1, Math.min(screenWidth / 1440, screenHeight / 900));
+    let scale = getMinScreenScale();
     if (scale >= 1) {
       return;
     }

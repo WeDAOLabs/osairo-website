@@ -1,31 +1,34 @@
 import mainStyle from "@/styles/main.module.css";
 import panelStyle from "./page.module.css";
+import PageFitter from "../page-fitter/page-fitter";
 
 export default function HomePage2() {
   return (
     <>
-      <div
-        className={mainStyle.containerFullPage}
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <PageFitter>
         <div
-          className={panelStyle.panelContainer}
+          className={mainStyle.containerFullPage}
           style={{
             justifyContent: "center",
             alignItems: "center",
           }}
         >
           <div
-            className={panelStyle.panelCircleContainer}
+            className={panelStyle.panelContainer}
             style={{
-              background: "#d1dcfe",
+              justifyContent: "center",
+              alignItems: "center",
             }}
-          ></div>
+          >
+            <div
+              className={panelStyle.panelCircleContainer}
+              style={{
+                background: "#d1dcfe",
+              }}
+            ></div>
+          </div>
         </div>
-      </div>
+      </PageFitter>
     </>
   );
 }
