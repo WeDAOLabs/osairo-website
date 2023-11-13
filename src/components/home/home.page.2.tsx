@@ -1,6 +1,7 @@
 import mainStyle from "@/styles/main.module.css";
 import panelStyle from "./page.module.css";
 import PageFitter from "../page-fitter/page-fitter";
+import Image from "next/image";
 
 export default function HomePage2() {
   return (
@@ -23,8 +24,9 @@ export default function HomePage2() {
             <div
               className={panelStyle.panelCircleContainer}
               style={{
-                background:
-                  "linear-gradient(111.36deg, #374B64 0.75%, #C6CEE1 100%, #C6CEE1 100%)",
+                // background:
+                //   "linear-gradient(111.36deg, #374B64 0.75%, #C6CEE1 100%, #C6CEE1 100%)",
+                background: "#c6cee1",
                 display: "flex",
               }}
             >
@@ -37,7 +39,14 @@ export default function HomePage2() {
                   flex: "56%",
                   maxWidth: "56%",
                 }}
-              ></div>
+              >
+                <Image
+                  src="/hp-2-treasure.png"
+                  width={612}
+                  height={739}
+                  alt="osairo treasure"
+                />
+              </div>
               <div
                 className="page-right"
                 style={{
@@ -52,7 +61,7 @@ export default function HomePage2() {
                   style={{
                     width: 460,
                     height: 642,
-                    background: "#474b57",
+                    background: "#8190b4",
                     borderRadius: 30,
                     position: "relative",
                   }}
@@ -60,14 +69,14 @@ export default function HomePage2() {
                   <label
                     style={{
                       position: "absolute",
-                      width: 383,
-                      height: 170,
-                      fontFamily: "Arial Black",
+                      width: 434.43,
+                      height: 177.51,
+                      fontFamily: "Pilat Extended",
                       fontStyle: "normal",
-                      fontWeight: 900,
+                      fontWeight: 700,
                       fontSize: 60,
                       color: "white",
-                      left: 45,
+                      left: 30,
                       top: 25,
                     }}
                   >
@@ -76,17 +85,17 @@ export default function HomePage2() {
                   <text
                     style={{
                       position: "absolute",
-                      width: 384,
-                      height: 224,
+                      width: 434,
+                      height: 267,
 
-                      fontFamily: "Arial Hebrew",
+                      fontFamily: "Pilat Extended",
                       fontStyle: "normal",
-                      fontWeight: 700,
+                      fontWeight: 600,
                       fontSize: 30,
 
                       color: "white",
 
-                      left: 45,
+                      left: 30,
                       top: 361,
                     }}
                   >

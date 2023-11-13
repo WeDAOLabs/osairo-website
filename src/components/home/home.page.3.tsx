@@ -41,7 +41,8 @@ export default function HomePage3() {
                   style={{
                     width: 460,
                     height: 642,
-                    background: "#474b57",
+                    // background: "#474b57",
+                    background: "transparent",
                     borderRadius: 30,
                     position: "relative",
                   }}
@@ -49,15 +50,15 @@ export default function HomePage3() {
                   <label
                     style={{
                       position: "absolute",
-                      width: 415,
-                      height: 77,
-                      fontFamily: "Arial Black",
+                      width: 486,
+                      height: 154,
+                      fontFamily: "Pilat Extended",
                       fontStyle: "normal",
-                      fontWeight: 900,
+                      fontWeight: 700,
                       fontSize: 60,
-                      color: "white",
-                      left: 45,
-                      top: 25,
+                      color: "#5f4a82",
+                      left: 89,
+                      top: 208,
                     }}
                   >
                     27 precious resources
@@ -65,18 +66,18 @@ export default function HomePage3() {
                   <text
                     style={{
                       position: "absolute",
-                      width: 383,
-                      height: 192,
+                      width: 486,
+                      height: 195,
 
-                      fontFamily: "Arial Hebrew",
+                      fontFamily: "Pilat Extended",
                       fontStyle: "normal",
                       fontWeight: 700,
                       fontSize: 30,
 
-                      color: "white",
+                      color: "#5f4a82",
 
-                      left: 39,
-                      top: 355,
+                      left: 89,
+                      top: 437,
                     }}
                   >
                     Resources are the core output of mining and the economic
