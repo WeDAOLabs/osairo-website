@@ -10,12 +10,17 @@ import {
   LINK_WHITEPAPER,
   LINK_X,
 } from "@/const/game";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { getMinScreenScale } from "@/plugins/screen.fitter";
 
 export default function HomePage6() {
-  const [topPos, setTopPos] = useState(560 * Math.min(1, getMinScreenScale()));
-  const [scale, setScale] = useState(getMinScreenScale());
+  const [topPos, setTopPos] = useState(560);
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    setTopPos(560 * Math.min(1, getMinScreenScale()));
+    setScale(getMinScreenScale());
+  }, []);
 
   return (
     <>
@@ -87,7 +92,7 @@ export default function HomePage6() {
               alt="osairo"
               style={{
                 position: "absolute",
-                top: 329 * scale - 50,
+                top: 329 * scale - 100,
                 left: 1178,
               }}
             />
@@ -98,7 +103,7 @@ export default function HomePage6() {
                 width: 215,
                 height: 122,
                 left: 97,
-                top: 328 * scale - 50,
+                top: 328 * scale - 100,
                 display: "flex",
                 flexDirection: "column",
               }}
@@ -163,7 +168,7 @@ export default function HomePage6() {
                 width: 93,
                 height: 79,
                 left: 312,
-                top: 328 * scale - 50,
+                top: 328 * scale - 100,
                 display: "flex",
                 flexDirection: "column",
               }}

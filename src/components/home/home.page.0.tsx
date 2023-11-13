@@ -31,6 +31,7 @@ export default function HomePage0() {
           style={{
             justifyContent: "center",
             alignItems: "center",
+            position: "relative",
           }}
         >
           <div
@@ -41,6 +42,17 @@ export default function HomePage0() {
               width={1440}
               height={900}
               alt="osairo world"
+            />
+            <Image
+              src="/hp-0-map.png"
+              width={1115}
+              height={900}
+              alt="osairo map"
+              style={{
+                position: "absolute",
+                left: 429,
+                top: 0,
+              }}
             />
             <Image
               src="/homepage-txt.png"
