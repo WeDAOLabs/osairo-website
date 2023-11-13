@@ -33,11 +33,11 @@ export default function HomePage4() {
                   width: 327,
                   height: 85,
 
-                  fontFamily: "Arial Black",
+                  fontFamily: "Pilat Extended",
                   fontStyle: "normal",
                   fontWeight: 900,
                   fontSize: 60,
-                  color: "white",
+                  color: "#775f40",
 
                   left: 87,
                   top: 62,

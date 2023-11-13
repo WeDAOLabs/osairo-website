@@ -1,6 +1,7 @@
 import mainStyle from "@/styles/main.module.css";
 import panelStyle from "./page.module.css";
 import PageFitter from "../page-fitter/page-fitter";
+import Image from "next/image";
 
 export default function HomePage3() {
   return (
@@ -58,7 +59,7 @@ export default function HomePage3() {
                       fontSize: 60,
                       color: "#5f4a82",
                       left: 49,
-                      top: 208,
+                      top: 108,
                     }}
                   >
                     27 precious resources
@@ -77,7 +78,7 @@ export default function HomePage3() {
                       color: "#5f4a82",
 
                       left: 49,
-                      top: 437,
+                      top: 337,
                     }}
                   >
                     Resources are the core output of mining and the economic
@@ -95,7 +96,14 @@ export default function HomePage3() {
                   flex: "56%",
                   maxWidth: "56%",
                 }}
-              ></div>
+              >
+                <Image
+                  src="/hp-resources.png"
+                  width={710}
+                  height={478}
+                  alt="resource"
+                />
+              </div>
             </div>
           </div>
         </div>
