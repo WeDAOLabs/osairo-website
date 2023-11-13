@@ -6,6 +6,8 @@ export interface ITxtMenuItem {
   onClick?: Function;
   bgColor?: string;
   txtColor?: string;
+  fontFamily?: string;
+  fontSize?: number;
 }
 export default function TxtMenuItem(props: ITxtMenuItem) {
   const onItemClicked = () => {
@@ -25,6 +27,7 @@ export default function TxtMenuItem(props: ITxtMenuItem) {
           className={txtMenuStyle.txtMenuItemLabel}
           style={{
             color: props?.txtColor ? props?.txtColor : "white",
+            fontFamily: props?.fontFamily ? props?.fontFamily : "Arial Hebrew",
           }}
         >
           {props.txt}

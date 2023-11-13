@@ -31,3 +31,9 @@ body {
   font-family: "Arial Rounded MT Bold";
   src: url("../../public/Arial_Rounded_MT_Bold.ttf") format("truetype");
 }
+
+
+@font-face {
+  font-family: "Pilat Extended";
+  src: url("../../public/PilatExtended-Regular.ttf") format("truetype");
+}

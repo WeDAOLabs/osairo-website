@@ -67,7 +67,7 @@ export default function HomePage1() {
                   style={{
                     width: 460,
                     height: 642,
-                    background: "#555c50",
+                    background: "#8f9f84",
                     borderRadius: 30,
                     position: "relative",
                   }}
@@ -75,15 +75,15 @@ export default function HomePage1() {
                   <label
                     style={{
                       position: "absolute",
-                      width: 415,
+                      width: 462.4,
                       height: 77,
-                      fontFamily: "Arial Black",
+                      fontFamily: "Pilat Extended",
                       fontStyle: "normal",
                       fontWeight: 900,
                       fontSize: 60,
                       color: "white",
-                      left: 45,
-                      top: 25,
+                      left: 12.34,
+                      top: 47,
                     }}
                   >
                     LAND NFT
@@ -91,23 +91,23 @@ export default function HomePage1() {
                   <text
                     style={{
                       position: "absolute",
-                      width: 395,
-                      height: 239,
+                      width: 473.58,
+                      height: 278,
 
-                      fontFamily: "Arial Hebrew",
+                      fontFamily: "Pilat Extended",
                       fontStyle: "normal",
-                      fontWeight: 700,
+                      // fontWeight: 600,
                       fontSize: 30,
 
                       color: "white",
 
-                      left: 39,
-                      top: 295,
+                      left: 12.34,
+                      top: 367,
                     }}
                   >
                     NFTs with 6 distinct terrains will yield various resource
-                    types, with resources of levels 1 to 4 distributed in
-                    different proportions.
+                    types, with resources of levels 1 to <br />4<br />{" "}
+                    distributed in different proportions.
                   </text>
                 </div>
               </div>
@@ -128,15 +128,15 @@ export default function HomePage1() {
                 >
                   <text
                     style={{
-                      width: 716,
-                      height: 130,
+                      width: 640,
+                      height: 83.52,
 
-                      fontFamily: "Arial Black",
+                      fontFamily: "Pilat Extended",
                       fontStyle: "normal",
-                      fontWeight: 900,
-                      fontSize: 38,
+                      fontWeight: 600,
+                      fontSize: 30,
 
-                      color: "#555c50",
+                      color: "#8F9E84",
 
                       left: 39,
                       top: 295,
@@ -206,6 +206,8 @@ export default function HomePage1() {
                     >
                       <TxtMenuItem
                         txt="OIT MINT"
+                        fontFamily="Pilat Extended"
+                        fontSize={16}
                         onClick={() => {
                           toast.info("coming soon!");
                         }}
@@ -223,6 +225,8 @@ export default function HomePage1() {
                     >
                       <TxtMenuItem
                         txt="ETH MINT"
+                        fontSize={16}
+                        fontFamily="Pilat Extended"
                         onClick={() => {
                           toast.info("coming soon!");
                         }}
