@@ -57,7 +57,7 @@ export default function HomePage3() {
                       fontWeight: 700,
                       fontSize: 60,
                       color: "#5f4a82",
-                      left: 89,
+                      left: 49,
                       top: 208,
                     }}
                   >
@@ -76,7 +76,7 @@ export default function HomePage3() {
 
                       color: "#5f4a82",
 
-                      left: 89,
+                      left: 49,
                       top: 437,
                     }}
                   >
