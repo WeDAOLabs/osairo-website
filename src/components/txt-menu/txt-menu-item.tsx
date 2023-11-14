@@ -28,6 +28,7 @@ export default function TxtMenuItem(props: ITxtMenuItem) {
           style={{
             color: props?.txtColor ? props?.txtColor : "white",
             fontFamily: props?.fontFamily ? props?.fontFamily : "Arial Hebrew",
+            fontSize: props?.fontSize ? props?.fontSize : 20,
           }}
         >
           {props.txt}

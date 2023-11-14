@@ -77,12 +77,12 @@ export default function HomePage1() {
                       position: "absolute",
                       width: 462.4,
                       height: 77,
-                      fontFamily: "Pilat Extended",
+                      fontFamily: "Pilat Extended Bold",
                       fontStyle: "normal",
-                      fontWeight: 900,
-                      fontSize: 60,
+                      fontWeight: 700,
+                      fontSize: 50,
                       color: "white",
-                      left: 12.34,
+                      left: 26.34,
                       top: 47,
                     }}
                   >
@@ -91,17 +91,17 @@ export default function HomePage1() {
                   <text
                     style={{
                       position: "absolute",
-                      width: 473.58,
+                      width: 460,
                       height: 278,
 
-                      fontFamily: "Pilat Extended",
+                      fontFamily: "Pilat Extended Demi",
                       fontStyle: "normal",
                       // fontWeight: 600,
-                      fontSize: 30,
+                      fontSize: 26,
 
                       color: "white",
 
-                      left: 12.34,
+                      left: 26.34,
                       top: 367,
                     }}
                   >
@@ -131,7 +131,7 @@ export default function HomePage1() {
                       width: 640,
                       height: 83.52,
 
-                      fontFamily: "Pilat Extended",
+                      fontFamily: "Pilat Extended Demi",
                       fontStyle: "normal",
                       fontWeight: 600,
                       fontSize: 30,
@@ -206,7 +206,7 @@ export default function HomePage1() {
                     >
                       <TxtMenuItem
                         txt="OIT MINT"
-                        fontFamily="Pilat Extended"
+                        fontFamily="Pilat Extended Bold"
                         fontSize={16}
                         onClick={() => {
                           toast.info("coming soon!");
@@ -226,7 +226,7 @@ export default function HomePage1() {
                       <TxtMenuItem
                         txt="ETH MINT"
                         fontSize={16}
-                        fontFamily="Pilat Extended"
+                        fontFamily="Pilat Extended Bold"
                         onClick={() => {
                           toast.info("coming soon!");
                         }}

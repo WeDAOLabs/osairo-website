@@ -37,3 +37,29 @@ body {
   font-family: "Pilat Extended";
   src: url("../../public/PilatExtended-Regular.ttf") format("truetype");
 }
+
+
+@font-face {
+  font-family: "Pilat Extended Bold";
+  src: url("../../public/PilatExtended-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Pilat Extended Black";
+  src: url("../../public/PilatExtended-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Pilat Extended Demi";
+  src: url("../../public/PilatExtended-DemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Pilat Extended Demi";
+  src: url("../../public/PilatExtended-DemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Pilat Extended Heavy";
+  src: url("../../public/PilatExtended-Heavy.ttf") format("truetype");
+}
