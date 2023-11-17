@@ -1,5 +1,4 @@
 import mainStyle from "@/styles/main.module.css";
-import panelStyle from "./page.module.css";
 import TxtMenuItem from "../txt-menu/txt-menu-item";
 import "swiper/css";
 import "swiper/react";
@@ -9,6 +8,8 @@ import {Navigation, EffectCoverflow, Pagination} from "swiper/modules";
 import Image from "next/image";
 import PageFitter from "../page-fitter/page-fitter";
 import {toast} from "react-toastify";
+import pageStyle from "@/components/home2/page.module.css";
+import FigmaImage from "@/components/figma-image/figma-image";
 
 export default function HomePage1() {
     const TileImages = [
@@ -32,55 +33,18 @@ export default function HomePage1() {
     return (
         <>
             <PageFitter>
-                <div
-                    className={mainStyle.containerFullPage}
-                    style={{
-                        justifyContent: "center",
-                        alignItems: "center",
-                    }}
-                >
-                    <div
-                        className={`${panelStyle.panelContainer} ${mainStyle.flexCenter}`}
-                    >
-                        <Image
-                            src="/assets/homepage1-bg-color.png"
-                            width={1440}
-                            height={900}
-                            alt="osairo world background"
-                        />
-                        <Image
-                            src="/assets/homepage1-bg.png"
-                            width={1440}
-                            height={900}
-                            alt="osairo world background2"
-                            style={{
-                                position: "absolute",
-                                left: 0,
-                                top: 0,
-                            }}
-                        />
-                        <Image
-                            src="/assets/homepage1-decorate.png"
-                            width={179}
-                            height={169}
-                            alt="osairo world decorate"
-                            style={{
-                                position: "absolute",
-                                left: 1048,
-                                top: 137,
-                            }}
-                        />
-                        <Image
-                            src="/assets/homepage1-decorate2.png"
-                            width={154}
-                            height={164}
-                            alt="osairo world decorate2"
-                            style={{
-                                position: "absolute",
-                                left: 184,
-                                top: 574,
-                            }}
-                        />
+                <div className={`${pageStyle.outerContainer}`}>
+                    <div className={`${pageStyle.innerContainer}`}>
+                        <FigmaImage figmaX={6220} figmaY={306} figmaW={1440} figmaH={900} homepageNumber={1}
+                                    name={"background-color"}/>
+                        <FigmaImage figmaX={6220} figmaY={306} figmaW={1440} figmaH={900} homepageNumber={1}
+                                    name={"background"}/>
+                        <FigmaImage figmaX={6404} figmaY={880} figmaW={154} figmaH={164} homepageNumber={1}
+                                    name={"decorate-conch"}/>
+                        <FigmaImage figmaX={7268} figmaY={443} figmaW={179} figmaH={169} homepageNumber={1}
+                                    name={"decorate-starfish"}/>
+                        <FigmaImage figmaX={6872} figmaY={332} figmaW={137} figmaH={156} homepageNumber={1}
+                                    name={"decorate-tree"}/>
                         <Image
                             src="/assets/homepage1-txt.png"
                             width={374.5}
