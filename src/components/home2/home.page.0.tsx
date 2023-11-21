@@ -1,4 +1,3 @@
-import Image from "next/image";
 import MediaIcon from "../media-icon/media-icon";
 import pageStyle from "./page.module.css";
 import {LINK_DISCORD, LINK_X} from "@/const/game";
@@ -34,17 +33,8 @@ export default function HomePage0() {
                                     name={'material'}/>
                         <FigmaImage figmaX={6220} figmaY={87} figmaW={1440} figmaH={220} homepageNumber={0}
                                     name={'wave-mask'}/>
-                        <Image
-                            src="/assets/homepage0-txt.png"
-                            width={900}
-                            height={372}
-                            alt="osairo world text"
-                            style={{
-                                position: "absolute",
-                                left: 97,
-                                top: 386,
-                            }}
-                        />
+                        <FigmaImage figmaX={6303} figmaY={-234} figmaW={900} figmaH={372} homepageNumber={0}
+                                    name={'txt-description'}/>
                         <div
                             className="media-panel"
                             style={{

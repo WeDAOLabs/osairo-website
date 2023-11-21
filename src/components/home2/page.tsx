@@ -8,7 +8,7 @@ import { Mousewheel } from "swiper/modules";
 import HomePage0 from "./home.page.0";
 import HomePage1 from "./home.page.1";
 import HomePage2 from "./home.page.2";
-// import HomePage3 from "./home.page.3";
+import HomePage3 from "./home.page.3";
 // import HomePage4 from "./home.page.4";
 // import HomePage5 from "./home.page.5";
 // import HomePage6 from "./home.page.6";
@@ -81,9 +81,9 @@ export default function Home() {
         <SwiperSlide>
           <HomePage2 />
         </SwiperSlide>
-        {/*<SwiperSlide>*/}
-        {/*  <HomePage3 />*/}
-        {/*</SwiperSlide>*/}
+        <SwiperSlide>
+          <HomePage3 />
+        </SwiperSlide>
         {/*<SwiperSlide>*/}
         {/*  <HomePage4 />*/}
         {/*</SwiperSlide>*/}
