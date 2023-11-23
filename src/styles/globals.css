@@ -21,8 +21,6 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    margin: 0;
-    padding: 0;
     position: relative;
     background: #383e3a;
 }
@@ -67,15 +65,30 @@ body {
 .swiper-button-next {
     position: absolute !important;
     left: 1220px !important;
-    top: 421.5px !important;
-    width: 58.5px !important;
+    top: 450px !important;
+    width: 59px !important;
     height: 61px !important;
 }
 
 .swiper-button-prev {
     position: absolute !important;
     left: 160px !important;
-    top: 421.5px !important;
-    width: 58.5px !important;
+    top: 450px !important;
+    width: 59px !important;
     height: 61px !important;
+}
+
+.swiper-pagination-bullet {
+    width: 25px !important;
+    height: 25px !important;
+    border: 1px solid #007aff !important;
+    opacity: 1 !important;
+    background: #F0F0F0 !important;
+}
+
+.swiper-pagination-bullet-active {
+    width: 25px !important;
+    height: 25px !important;
+    background: radial-gradient(circle at center, #007aff 40%, #F0F0F0 50%) !important;
+
 }

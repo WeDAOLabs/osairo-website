@@ -16,7 +16,7 @@ export default function FigmaImage(props: IFigmaImageProps) {
             <Image
                 width={props.figmaW}
                 height={props.figmaH}
-                alt={`osairo world ${props.name}`}
+                alt={`osairo world image: ${props.name}`}
                 src={`assets/homepage${props.homepageNumber}/${props.name}.png`}
                 style={{
                     position: "absolute",
