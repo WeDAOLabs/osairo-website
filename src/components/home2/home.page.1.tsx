@@ -26,6 +26,8 @@ export default function HomePage1() {
                                     name={"decorate-tree"}/>
                         <FigmaImage figmaX={6742} figmaY={414} figmaW={397} figmaH={55} homepageNumber={1}
                                     name={"txt-title"}/>
+                        <FigmaImage figmaX={6220} figmaY={1121} figmaW={1440} figmaH={85} homepageNumber={1}
+                                    name={"decorate-mask"}/>
                         <CustomSwiper/>
                         <div
                             className={`right-bottom ${mainStyle.flexCenter}`}
@@ -36,7 +38,7 @@ export default function HomePage1() {
                             <div
                                 style={{
                                     position: "absolute",
-                                    left: 607,
+                                    left: 630,
                                     top: 781,
                                 }}>
                                 <TxtMenuItem

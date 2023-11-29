@@ -4,7 +4,6 @@
     top: 216px;
     width: 901px;
     height: 507px;
-    /*background-color: red;*/
 }
 
 .SwiperSlideContainer {
@@ -21,4 +20,5 @@
 .swiperPaginationContainer {
     position: absolute !important;
     top: 700px !important;
+    height: 30px !important;
 }

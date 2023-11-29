@@ -39,12 +39,6 @@ const TileImages = [
         width: 363,
         height: 409,
         onClick: () => toast.info("coming soon!"),
-    },
-    {
-        src: "/assets/swiper/tile0.png",
-        width: 363,
-        height: 409,
-        onClick: () => toast.info("coming soon!"),
     }
 ];
 
@@ -93,6 +87,7 @@ export default function CustomSwiper(props: ICustomSwiper) {
                    alt="osairo world image: button prev"
             />
             <div className={`swiper-pagination ${SwiperStyle.swiperPaginationContainer}`}/>
+            {/*<div className="swiper-pagination"/>*/}
         </>
     );
 }

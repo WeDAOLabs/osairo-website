@@ -40,7 +40,7 @@ export default function HomePage0() {
                             style={{
                                 position: "absolute",
                                 left: 97,
-                                top: 824,
+                                top: 820,
                             }}
                         >
                             <div

@@ -40,7 +40,7 @@ export default function TitleBar() {
   const TitleMenuItems: ITitleMenuItem[] = [
     {
       index: 0,
-      txt: TITLE_ITEM_COMMUNITY,
+      txt: TITLE_ITEM_EARN,
       selected: true,
       onClick: onMenuItemClicked,
     },
@@ -58,7 +58,7 @@ export default function TitleBar() {
     },
     {
       index: 3,
-      txt: TITLE_ITEM_EARN,
+      txt: TITLE_ITEM_COMMUNITY,
       selected: false,
       onClick: onMenuItemClicked,
     },
