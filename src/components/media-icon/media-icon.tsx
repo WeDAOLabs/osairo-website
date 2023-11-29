@@ -12,7 +12,7 @@ export default function MediaIcon(props: IMediaIcon) {
     <>
       <div className={mediaIconStyle.mediaIconBg}>
         <Image
-          src={`/icon-${props.txt}.png`}
+          src={`/assets/icon-${props.txt}.png`}
           alt="media"
           width={props.size[0]}
           height={props.size[1]}

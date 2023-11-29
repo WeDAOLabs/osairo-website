@@ -1,6 +1,6 @@
 import { headers } from "next/headers";
 import isMobile from "ismobilejs";
-import Home from "@/components/home/page";
+import Home from "@/components/home2/page";
 import HomeMobile from "@/components/home-mobile/page";
 
 export default function App() {

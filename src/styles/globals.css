@@ -3,63 +3,94 @@
 @tailwind utilities; */
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
 body {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  background: #383e3a;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: relative;
+    background: #383e3a;
 }
 
 @font-face {
-  font-family: "Arial Rounded MT Bold";
-  src: url("../../public/Arial_Rounded_MT_Bold.ttf") format("truetype");
-}
-
-
-@font-face {
-  font-family: "Pilat Extended";
-  src: url("../../public/PilatExtended-Regular.ttf") format("truetype");
+    font-family: "Arial Rounded MT Bold";
+    src: url("../../public/Arial_Rounded_MT_Bold.ttf") format("truetype");
 }
 
 
 @font-face {
-  font-family: "Pilat Extended Bold";
-  src: url("../../public/PilatExtended-Bold.ttf") format("truetype");
+    font-family: "Pilat Extended";
+    src: url("../../public/PilatExtended-Regular.ttf") format("truetype");
+}
+
+
+@font-face {
+    font-family: "Pilat Extended Bold";
+    src: url("../../public/PilatExtended-Bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Pilat Extended Black";
-  src: url("../../public/PilatExtended-Black.ttf") format("truetype");
+    font-family: "Pilat Extended Black";
+    src: url("../../public/PilatExtended-Black.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Pilat Extended Demi";
-  src: url("../../public/PilatExtended-DemiBold.ttf") format("truetype");
+    font-family: "Pilat Extended Demi";
+    src: url("../../public/PilatExtended-DemiBold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Pilat Extended Demi";
-  src: url("../../public/PilatExtended-DemiBold.ttf") format("truetype");
+    font-family: "Pilat Extended Demi";
+    src: url("../../public/PilatExtended-DemiBold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Pilat Extended Heavy";
-  src: url("../../public/PilatExtended-Heavy.ttf") format("truetype");
+    font-family: "Pilat Extended Heavy";
+    src: url("../../public/PilatExtended-Heavy.ttf") format("truetype");
+}
+
+.swiper-button-next {
+    position: absolute !important;
+    left: 1220px !important;
+    top: 450px !important;
+    width: 59px !important;
+    height: 61px !important;
+}
+
+.swiper-button-prev {
+    position: absolute !important;
+    left: 160px !important;
+    top: 450px !important;
+    width: 59px !important;
+    height: 61px !important;
+}
+
+.swiper-pagination-bullet {
+    width: 25px !important;
+    height: 25px !important;
+    margin-left: 25px!important;
+    margin-right: 25px!important;
+    border: 1px solid #007aff !important;
+    opacity: 1 !important;
+    background: #F0F0F0 !important;
+}
+
+.swiper-pagination-bullet-active {
+    width: 25px !important;
+    height: 25px !important;
+    background: radial-gradient(circle at center, #007aff 40%, #F0F0F0 50%) !important;
+
 }
