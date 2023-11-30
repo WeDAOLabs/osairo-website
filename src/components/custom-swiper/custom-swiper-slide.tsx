@@ -6,21 +6,42 @@ import SwiperStyle from "@/components/custom-swiper/swiper.module.css";
 
 export interface ICustomSwiperSlide {
     src: string;
+    nftType: string;
     width: number;
     height: number;
+    index: number;
+    activeIndex: number;
 }
 
 export default function CustomSwiperSlide(props: ICustomSwiperSlide) {
-    return (
-        <>
-            <div className={`${SwiperStyle.SwiperSlideContainer}`}>
-                <Image
-                    alt="land nft"
-                    src={props.src}
-                    width={props.width}
-                    height={props.height}
-                />
-            </div>
-        </>
-    );
+
+    if (props.activeIndex == props.index) {
+        return (
+            <>
+                <div className={`${SwiperStyle.SwiperSlideContainer}`}>
+                    <p className={`${SwiperStyle.SwiperSlideNftType}`}>NFT Type : {props.nftType}</p>
+                    <Image className={`${SwiperStyle.SwiperSlideImage}`}
+                           alt="land nft"
+                           src={props.src}
+                           width={props.width}
+                           height={props.height}
+                    />
+                </div>
+            </>
+        );
+    } else {
+        return (
+            <>
+                <div className={`${SwiperStyle.SwiperSlideContainer}`}>
+                    <Image className={`${SwiperStyle.SwiperSlideImage2}`}
+                           alt="land nft"
+                           src={props.src}
+                           width={props.width}
+                           height={props.height}
+                    />
+                    <div className={`${SwiperStyle.SwiperSlideImageMask}`}/>
+                </div>
+            </>
+        );
+    }
 }
