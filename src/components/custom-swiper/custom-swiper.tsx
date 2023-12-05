@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import "swiper/css";
 import "swiper/react";
 import "swiper/css/navigation";
@@ -12,6 +13,7 @@ import SwiperStyle from "@/components/custom-swiper/swiper.module.css"
 export interface ICustomSwiper {
 }
 
+
 const pagination = {
     el: ".swiper-pagination",
     clickable: true,
@@ -24,31 +26,40 @@ const pagination = {
 const TileImages = [
     {
         src: "/assets/swiper/tile0.png",
-        width: 363,
-        height: 409,
+        nftType: "Forest",
+        width: 778 / 2,
+        height: 762 / 2,
         onClick: () => toast.info("coming soon!"),
     },
     {
         src: "/assets/swiper/tile1.png",
-        width: 363,
-        height: 409,
+        nftType: "Desert",
+        width: 837 / 2,
+        height: 988 / 2,
         onClick: () => toast.info("coming soon!"),
     },
     {
         src: "/assets/swiper/tile2.png",
-        width: 363,
-        height: 409,
+        nftType: "Mountain",
+        width: 676 / 2,
+        height: 762 / 2,
         onClick: () => toast.info("coming soon!"),
     }
 ];
 
 export default function CustomSwiper(props: ICustomSwiper) {
 
+    const [activeIndex, setActiveIndex] = useState(0);
+
+
     return (
         <>
             <Swiper className={`${SwiperStyle.swiperContainer}`}
                     effect={`coverflow`}
                     initialSlide={1}
+                    onSlideChange={(swiper) => {
+                        setActiveIndex(swiper.activeIndex);
+                    }}
                     slidesPerView={3}
                     centeredSlides={true}
                     grabCursor={true}
@@ -68,7 +79,9 @@ export default function CustomSwiper(props: ICustomSwiper) {
             >
                 {TileImages.map((tile: any, k: number) => (
                     <SwiperSlide key={k}>
-                        <CustomSwiperSlide src={tile.src} width={tile.width} height={tile.height}/>
+                        <CustomSwiperSlide src={tile.src} nftType={tile.nftType}
+                                           index={k} activeIndex={activeIndex}
+                                           width={tile.width} height={tile.height}/>
                     </SwiperSlide>
                 ))}
 
@@ -87,7 +100,6 @@ export default function CustomSwiper(props: ICustomSwiper) {
                    alt="osairo world image: button prev"
             />
             <div className={`swiper-pagination ${SwiperStyle.swiperPaginationContainer}`}/>
-            {/*<div className="swiper-pagination"/>*/}
         </>
     );
 }

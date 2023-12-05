@@ -39,7 +39,7 @@ export default function HomePage1() {
                                 style={{
                                     position: "absolute",
                                     left: 630,
-                                    top: 781,
+                                    top: 761,
                                 }}>
                                 <TxtMenuItem
                                     txt="NFT MINT"

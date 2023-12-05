@@ -67,10 +67,10 @@ export default function HomePage6() {
                         <text
                             style={{
                                 position: "absolute",
-                                width: 550,
+                                width: 654,
                                 height: 170,
 
-                                fontFamily: "Arial Black",
+                                fontFamily: "Pilat Extended",
                                 fontStyle: "normal",
                                 fontWeight: 900,
                                 fontSize: 60,
@@ -108,10 +108,10 @@ export default function HomePage6() {
                         >
                             <label
                                 style={{
-                                    width: 78,
+                                    width: 215,
                                     height: 10,
 
-                                    fontFamily: "Arial Hebrew",
+                                    fontFamily: "Pilat Extended",
                                     fontStyle: "normal",
                                     fontWeight: 400,
                                     fontSize: 14,
@@ -127,7 +127,7 @@ export default function HomePage6() {
                                     width: 215,
                                     height: 30,
 
-                                    fontFamily: "Arial Hebrew",
+                                    fontFamily: "Pilat Extended",
                                     fontStyle: "normal",
                                     fontWeight: 400,
                                     fontSize: 26,
@@ -146,7 +146,7 @@ export default function HomePage6() {
                                     width: 215,
                                     height: 30,
 
-                                    fontFamily: "Arial Hebrew",
+                                    fontFamily: "Pilat Extended",
                                     fontStyle: "normal",
                                     fontWeight: 400,
                                     fontSize: 26,
@@ -173,10 +173,10 @@ export default function HomePage6() {
                         >
                             <label
                                 style={{
-                                    width: 78,
+                                    width: 215,
                                     height: 10,
 
-                                    fontFamily: "Arial Hebrew",
+                                    fontFamily: "Pilat Extended",
                                     fontStyle: "normal",
                                     fontWeight: 400,
                                     fontSize: 14,
@@ -192,7 +192,7 @@ export default function HomePage6() {
                                     width: 215,
                                     height: 30,
 
-                                    fontFamily: "Arial Hebrew",
+                                    fontFamily: "Pilat Extended",
                                     fontStyle: "normal",
                                     fontWeight: 400,
                                     fontSize: 26,
@@ -211,7 +211,7 @@ export default function HomePage6() {
                                     width: 215,
                                     height: 30,
 
-                                    fontFamily: "Arial Hebrew",
+                                    fontFamily: "Pilat Extended",
                                     fontStyle: "normal",
                                     fontWeight: 400,
                                     fontSize: 26,
