@@ -8,14 +8,14 @@
 }
 
 .menuLabelStyle {
-  font-family: "Arial Rounded MT Bold";
+  font-family: "Pilat Extended Demi";
   font-style: normal;
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   color: #322e21;
   cursor: pointer;
 }
 
 .menuLabelStyleSelected {
-  color: #ffebbb
+  color: #FFF8CB
 }
