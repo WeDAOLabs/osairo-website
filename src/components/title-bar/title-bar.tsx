@@ -105,27 +105,27 @@ export default function TitleBar() {
             style={{
               width: 923,
               height: 70,
-              background: "#ffebbb",
+              background: "#FFF8CB",
               borderRadius: 50,
               marginTop: 30,
               position: "relative",
             }}
           >
-            <Image
-              alt="osairo logo"
-              src="/title-logo.png"
-              width={142}
-              height={51}
-              style={{
-                position: "absolute",
-                top: 6,
-                left: 26,
-                cursor: "pointer",
-              }}
-              onClick={onTitleImageClicked}
-            />
+            {/*<Image*/}
+            {/*  alt="osairo logo"*/}
+            {/*  src="/title-logo.png"*/}
+            {/*  width={142}*/}
+            {/*  height={51}*/}
+            {/*  style={{*/}
+            {/*    position: "absolute",*/}
+            {/*    top: 6,*/}
+            {/*    left: 26,*/}
+            {/*    cursor: "pointer",*/}
+            {/*  }}*/}
+            {/*  onClick={onTitleImageClicked}*/}
+            {/*/>*/}
             {menuItems.map((item: ITitleMenuItem, key: number) => {
-              const posX = 170 + key * 144;
+              const posX = 20 + key * 180;
               return (
                 <div
                   key={item.index}

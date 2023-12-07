@@ -31,6 +31,8 @@ export default function HomePage0() {
                                     name={'background'}/>
                         <FigmaImage figmaX={6220} figmaY={-620} figmaW={1440} figmaH={900} homepageNumber={0}
                                     name={'material'}/>
+                        <FigmaImage figmaX={6250} figmaY={-580} figmaW={241} figmaH={100} homepageNumber={0}
+                                    name={'logo'}/>
                         <FigmaImage figmaX={6220} figmaY={87} figmaW={1440} figmaH={220} homepageNumber={0}
                                     name={'wave-mask'}/>
                         <FigmaImage figmaX={6303} figmaY={-234} figmaW={900} figmaH={372} homepageNumber={0}
