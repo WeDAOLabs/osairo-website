@@ -1,228 +1,165 @@
-// import mainStyle from "@/styles/main.module.css";
+"use client";
+import mainStyle from "@/styles/main.module.css";
 import panelStyle from "./page.module.css";
 import PageFitter from "../page-fitter/page-fitter";
-import Image from "next/image";
-import {
-    LINK_DISCORD,
-    LINK_GITHUB,
-    LINK_WHITEPAPER,
-    LINK_X,
-} from "@/const/game";
+import TxtMenuItem from "../txt-menu/txt-menu-item";
+import { LINK_DISCORD } from "@/const/game";
 import { useEffect, useState } from "react";
+import { EventBus } from "@/plugins/event.bus";
+import { EventPageSlide } from "@/events/event.page.slide";
 import { getMinScreenScale } from "@/plugins/screen.fitter";
 
 export default function HomePage6() {
-    const [topPos, setTopPos] = useState(560);
-    const [scale, setScale] = useState(1);
+    const [topPos, setTopPos] = useState(0);
+
+    const onPushSwiperSlide = (idx: any) => {
+        if (idx <= 5) {
+            setTopPos(0);
+        } else {
+            let scale = getMinScreenScale();
+
+            setTopPos(560 * Math.min(1, scale));
+        }
+    };
 
     useEffect(() => {
-        setTopPos(560 * Math.min(1, getMinScreenScale()));
-        setScale(getMinScreenScale());
+        EventBus.instance.on(EventPageSlide.event, onPushSwiperSlide);
+
+        return () => {
+            EventBus.instance.off(EventPageSlide.event, onPushSwiperSlide);
+        };
     }, []);
 
     return (
         <>
-            {/* <div
-          className={mainStyle.containerFullPage}
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div
-            className={panelStyle.panelContainer}
-            style={{
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
             <div
-              className={panelStyle.panelCircleContainer}
-              style={{
-                background: "#383e3a",
-              }}
-            ></div>
-          </div>
-        </div> */}
-            <div
+                className={mainStyle.containerFullPage}
                 style={{
-                    display: "flex",
-                    height: topPos,
-                    position: "absolute",
-                    top: topPos,
-                    left: 0,
-                    width: "100vw",
-                    alignItems: "center",
                     justifyContent: "center",
+                    alignItems: "center",
+                    position: "absolute",
+                    width: "100vw",
+                    left: 0,
+                    top: topPos,
                 }}
             >
                 <PageFitter>
                     <div
+                        className={panelStyle.panelContainer}
                         style={{
-                            width: 1420,
-                            height: 560,
-                            position: "relative",
+                            justifyContent: "center",
+                            alignItems: "center",
                         }}
                     >
-                        <text
-                            style={{
-                                position: "absolute",
-                                width: 654,
-                                height: 170,
-
-                                fontFamily: "Pilat Extended",
-                                fontStyle: "normal",
-                                fontWeight: 900,
-                                fontSize: 60,
-
-                                color: "#FFEBBB",
-
-                                left: 97,
-                                top: 46 * scale,
-                            }}
-                        >
-                            Osairo Adventure game
-                        </text>
-                        <Image
-                            src="/logo-big.png"
-                            width={226.5}
-                            height={111}
-                            alt="osairo"
-                            style={{
-                                position: "absolute",
-                                top: 329 * scale - 100,
-                                left: 1178,
-                            }}
-                        />
                         <div
-                            className="learn-more"
+                            className={panelStyle.panelCircleContainer}
                             style={{
-                                position: "absolute",
-                                width: 215,
-                                height: 122,
-                                left: 97,
-                                top: 328 * scale - 100,
+                                background: "#c4e4ce",
                                 display: "flex",
-                                flexDirection: "column",
                             }}
                         >
-                            <label
+                            <div
+                                className="hp5-page-left"
                                 style={{
-                                    width: 215,
-                                    height: 10,
-
-                                    fontFamily: "Pilat Extended",
-                                    fontStyle: "normal",
-                                    fontWeight: 400,
-                                    fontSize: 14,
-
-                                    color: "#AFB2B0",
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    flex: "44%",
+                                    maxWidth: "44%",
                                 }}
                             >
-                                Learn More
-                            </label>
-                            <label
-                                className={panelStyle.labelWithLink}
+                                <div
+                                    style={{
+                                        width: 460,
+                                        height: 642,
+                                        background: "#3e4b41",
+                                        borderRadius: 30,
+                                        position: "relative",
+                                    }}
+                                >
+                                    <label
+                                        style={{
+                                            position: "absolute",
+                                            width: 415,
+                                            height: 170,
+                                            fontFamily: "Arial Black",
+                                            fontStyle: "normal",
+                                            fontWeight: 900,
+                                            fontSize: 60,
+                                            color: "white",
+                                            left: 45,
+                                            top: 25,
+                                        }}
+                                    >
+                                        You’re early
+                                    </label>
+                                    <text
+                                        style={{
+                                            position: "absolute",
+                                            width: 377.68,
+                                            height: 294,
+
+                                            fontFamily: "Arial Hebrew",
+                                            fontStyle: "normal",
+                                            fontWeight: 700,
+                                            fontSize: 30,
+
+                                            color: "white",
+
+                                            left: 39,
+                                            top: 204,
+                                        }}
+                                    >
+                                        Join the Osairo social community today. Be one of the
+                                        earliest contributors, together creating automated world.
+                                    </text>
+                                    <div
+                                        style={{
+                                            position: "absolute",
+                                            left: 55.3,
+                                            top: 540,
+                                        }}
+                                    >
+                                        <TxtMenuItem
+                                            txt="JOIN OSAIRO"
+                                            txtColor="#3e4b41"
+                                            bgColor="white"
+                                            onClick={() => {
+                                                window.open(LINK_DISCORD, "_blank");
+                                            }}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                className="hp5-page-right"
                                 style={{
-                                    width: 215,
-                                    height: 30,
-
-                                    fontFamily: "Pilat Extended",
-                                    fontStyle: "normal",
-                                    fontWeight: 400,
-                                    fontSize: 26,
-                                    color: "white",
-
-                                    marginTop: 15,
-                                    marginLeft: -4,
-                                }}
-                                onClick={() => window.open(LINK_GITHUB, "_blank")}
-                            >
-                                GitHub
-                            </label>
-                            <label
-                                className={panelStyle.labelWithLink}
-                                style={{
-                                    width: 215,
-                                    height: 30,
-
-                                    fontFamily: "Pilat Extended",
-                                    fontStyle: "normal",
-                                    fontWeight: 400,
-                                    fontSize: 26,
-                                    color: "white",
-                                    marginTop: 6,
-                                    marginLeft: -4,
-                                }}
-                                onClick={() => window.open(LINK_WHITEPAPER, "_blank")}
-                            >
-                                Whitepaper
-                            </label>
-                        </div>
-                        <div
-                            className="follow-us"
-                            style={{
-                                position: "absolute",
-                                width: 93,
-                                height: 79,
-                                left: 312,
-                                top: 328 * scale - 100,
-                                display: "flex",
-                                flexDirection: "column",
-                            }}
-                        >
-                            <label
-                                style={{
-                                    width: 215,
-                                    height: 10,
-
-                                    fontFamily: "Pilat Extended",
-                                    fontStyle: "normal",
-                                    fontWeight: 400,
-                                    fontSize: 14,
-
-                                    color: "#AFB2B0",
+                                    // display: "flex",
+                                    // justifyContent: "center",
+                                    // alignItems: "center",
+                                    flex: "56%",
+                                    maxWidth: "56%",
+                                    position: "relative",
                                 }}
                             >
-                                Follow Us
-                            </label>
-                            <label
-                                className={panelStyle.labelWithLink}
-                                style={{
-                                    width: 215,
-                                    height: 30,
+                                <text
+                                    style={{
+                                        position: "absolute",
+                                        width: 542.36,
+                                        height: 170,
+                                        fontFamily: "Arial Black",
+                                        fontStyle: "normal",
+                                        fontWeight: 900,
+                                        fontSize: 60,
+                                        color: "white",
 
-                                    fontFamily: "Pilat Extended",
-                                    fontStyle: "normal",
-                                    fontWeight: 400,
-                                    fontSize: 26,
-                                    color: "white",
-
-                                    marginTop: 15,
-                                    marginLeft: -4,
-                                }}
-                                onClick={() => window.open(LINK_DISCORD, "_blank")}
-                            >
-                                Discord
-                            </label>
-                            <label
-                                className={panelStyle.labelWithLink}
-                                style={{
-                                    width: 215,
-                                    height: 30,
-
-                                    fontFamily: "Pilat Extended",
-                                    fontStyle: "normal",
-                                    fontWeight: 400,
-                                    fontSize: 26,
-                                    color: "white",
-                                    marginTop: 6,
-                                    marginLeft: -4,
-                                }}
-                                onClick={() => window.open(LINK_X, "_blank")}
-                            >
-                                Twitter
-                            </label>
+                                        top: 65,
+                                        left: 60,
+                                    }}
+                                >
+                                    Welcome to our community
+                                </text>
+                            </div>
                         </div>
                     </div>
                 </PageFitter>

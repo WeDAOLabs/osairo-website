@@ -21,7 +21,7 @@ export default function FigmaImage(props: IFigmaImageProps) {
                 style={{
                     position: "absolute",
                     left: props.figmaX - 6220,
-                    top: props.figmaY - props.homepageNumber * 900 - (-594),
+                    top: props.figmaY - props.homepageNumber * 900 - (-1337),
                 }}
             />
         </>
