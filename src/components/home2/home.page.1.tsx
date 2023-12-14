@@ -1,77 +1,30 @@
-import MediaIcon from "../media-icon/media-icon";
 import pageStyle from "./page.module.css";
-import {LINK_DISCORD, LINK_X} from "@/const/game";
 import PageFitter from "../page-fitter/page-fitter";
 import FigmaImage from "@/components/figma-image/figma-image";
 
 export default function HomePage1() {
-    const MediaIcons = [
-        {
-            txt: "x",
-            onClick: () => {
-                window.open(LINK_X, "_blank");
-            },
-            size: [43.5, 35],
-        },
-        {
-            txt: "discord",
-            onClick: () => {
-                window.open(LINK_DISCORD, "_blank");
-            },
-            size: [44, 33],
-        },
-    ];
 
     return (
         <>
             <PageFitter>
                 <div className={`${pageStyle.outerContainer}`}>
                     <div className={`${pageStyle.innerContainer}`}>
-                        <FigmaImage figmaX={6220} figmaY={-1363} figmaW={1440} figmaH={900} homepageNumber={0}
+                        <FigmaImage figmaX={6220} figmaY={-463} figmaW={1440} figmaH={900} homepageNumber={1}
+                                    name={'background-color'}/>
+                        <FigmaImage figmaX={6220} figmaY={-439} figmaW={1440} figmaH={742} homepageNumber={1}
                                     name={'background'}/>
-                        <FigmaImage figmaX={6220} figmaY={-1363} figmaW={1440} figmaH={900} homepageNumber={0}
-                                    name={'material'}/>
-                        <FigmaImage figmaX={6250} figmaY={-1323} figmaW={241} figmaH={100} homepageNumber={0}
-                                    name={'logo'}/>
-                        <FigmaImage figmaX={6220} figmaY={-656} figmaW={1440} figmaH={220} homepageNumber={0}
-                                    name={'wave-mask'}/>
-                        <FigmaImage figmaX={6303} figmaY={-977} figmaW={900} figmaH={372} homepageNumber={0}
-                                    name={'txt-description'}/>
-                        <div
-                            className="media-panel"
-                            style={{
-                                position: "absolute",
-                                left: 97,
-                                top: 820,
-                            }}
-                        >
-                            <div
-                                style={{
-                                    position: "relative",
-                                    width: 800,
-                                    height: 70,
-                                }}
-                            >
-                                {MediaIcons.map((icon: any, k: number) => (
-                                    <div
-                                        key={icon.txt}
-                                        style={{
-                                            position: "absolute",
-                                            height: 70,
-                                            width: 100,
-                                            top: 0,
-                                            left: k === 0 ? 0 : k * 100,
-                                        }}
-                                    >
-                                        <MediaIcon
-                                            txt={icon.txt}
-                                            size={icon.size}
-                                            onClick={icon.onClick}
-                                        />
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+                        <FigmaImage figmaX={6872} figmaY={-382} figmaW={137} figmaH={156} homepageNumber={1}
+                                    name={"decorate-tree"}/>
+                        <FigmaImage figmaX={7660 - 1440} figmaY={-354 - 85} figmaW={1440} figmaH={85} homepageNumber={1}
+                                    name={"decorate-mask-top"}/>
+                        <FigmaImage figmaX={6220} figmaY={217} figmaW={1440} figmaH={85} homepageNumber={1}
+                                    name={"decorate-mask-bottom"}/>
+                        <FigmaImage figmaX={6831} figmaY={-303} figmaW={219} figmaH={55} homepageNumber={1}
+                                    name={"txt-title"}/>
+                        <FigmaImage figmaX={6316} figmaY={-194} figmaW={1277} figmaH={427} homepageNumber={1}
+                                    name={"material"}/>
+                        <FigmaImage figmaX={6887} figmaY={-240} figmaW={71} figmaH={71} homepageNumber={1}
+                                    name={"decorate0"}/>
                     </div>
                 </div>
             </PageFitter>

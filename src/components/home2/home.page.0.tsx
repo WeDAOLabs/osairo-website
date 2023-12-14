@@ -27,15 +27,15 @@ export default function HomePage0() {
             <PageFitter>
                 <div className={`${pageStyle.outerContainer}`}>
                     <div className={`${pageStyle.innerContainer}`}>
-                        <FigmaImage figmaX={6220} figmaY={-1363} figmaW={1440} figmaH={900} homepageNumber={0}
+                        <FigmaImage figmaX={6220} figmaY={-1363 - 158} figmaW={1440} figmaH={900} homepageNumber={0}
                                     name={'background'}/>
-                        <FigmaImage figmaX={6220} figmaY={-1363} figmaW={1440} figmaH={900} homepageNumber={0}
+                        <FigmaImage figmaX={6220} figmaY={-1363 - 158} figmaW={1440} figmaH={900} homepageNumber={0}
                                     name={'material'}/>
-                        <FigmaImage figmaX={6250} figmaY={-1323} figmaW={241} figmaH={100} homepageNumber={0}
+                        <FigmaImage figmaX={6250} figmaY={-1323 - 158} figmaW={241} figmaH={100} homepageNumber={0}
                                     name={'logo'}/>
-                        <FigmaImage figmaX={6220} figmaY={-656} figmaW={1440} figmaH={220} homepageNumber={0}
+                        <FigmaImage figmaX={6220} figmaY={-656 - 158} figmaW={1440} figmaH={220} homepageNumber={0}
                                     name={'wave-mask'}/>
-                        <FigmaImage figmaX={6303} figmaY={-977} figmaW={900} figmaH={372} homepageNumber={0}
+                        <FigmaImage figmaX={6303} figmaY={-977 - 158} figmaW={900} figmaH={372} homepageNumber={0}
                                     name={'txt-description'}/>
                         <div
                             className="media-panel"

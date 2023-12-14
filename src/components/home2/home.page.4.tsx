@@ -8,20 +8,20 @@ export default function HomePage4() {
             <PageFitter>
                 <div className={`${pageStyle.outerContainer}`}>
                     <div className={`${pageStyle.innerContainer}`}>
-                        <FigmaImage figmaX={6220} figmaY={2107} figmaW={1440} figmaH={900} homepageNumber={3}
+                        <FigmaImage figmaX={6220} figmaY={2108} figmaW={1440} figmaH={900} homepageNumber={4}
                                     name={"background-color"}/>
-                        <FigmaImage figmaX={6221} figmaY={2107} figmaW={1440} figmaH={959} homepageNumber={3}
+                        <FigmaImage figmaX={6221} figmaY={2107} figmaW={1440} figmaH={959} homepageNumber={4}
                                     name={"background"}/>
-                        <FigmaImage figmaX={6872} figmaY={2133} figmaW={137} figmaH={156} homepageNumber={3}
+                        <FigmaImage figmaX={7660 - 1440} figmaY={2195 - 85} figmaW={1440} figmaH={85} homepageNumber={4}
+                                    name={"decorate-mask-top"}/>
+                        <FigmaImage figmaX={6872} figmaY={2131} figmaW={137} figmaH={156} homepageNumber={4}
                                     name={"decorate-tree"}/>
-                        <FigmaImage figmaX={6351} figmaY={2247} figmaW={1179} figmaH={721} homepageNumber={3}
+                        <FigmaImage figmaX={6388} figmaY={2271} figmaW={1090} figmaH={666} homepageNumber={4}
                                     name={"decorate-scroll"}/>
-                        <FigmaImage figmaX={6269} figmaY={2819} figmaW={281} figmaH={179} homepageNumber={3}
-                                    name={"decorate-conch-left"}/>
-                        <FigmaImage figmaX={7329} figmaY={2806} figmaW={281} figmaH={179} homepageNumber={3}
-                                    name={"decorate-conch-right"}/>
-                        <FigmaImage figmaX={6489} figmaY={2215} figmaW={919} figmaH={65} homepageNumber={3}
+                        <FigmaImage figmaX={6656} figmaY={2214} figmaW={572} figmaH={65} homepageNumber={4}
                                     name={"txt-title"}/>
+                        <FigmaImage figmaX={6221} figmaY={2108} figmaW={1440} figmaH={900} homepageNumber={4}
+                                    name={"decorate-bottom"}/>
                     </div>
                 </div>
             </PageFitter>

@@ -8,7 +8,7 @@ export default function HomePage5() {
             <PageFitter>
                 <div className={`${pageStyle.outerContainer}`}>
                     <div className={`${pageStyle.innerContainer}`}>
-                        <FigmaImage figmaX={6220} figmaY={306} figmaW={1440} figmaH={900} homepageNumber={1}
+                        <FigmaImage figmaX={6220} figmaY={306} figmaW={1440} figmaH={900} homepageNumber={5}
                                     name={"background-color"}/>
                     </div>
                 </div>
