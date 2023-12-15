@@ -8,8 +8,8 @@ import {
     LINK_WHITEPAPER,
     LINK_X,
 } from "@/const/game";
-import { useEffect, useState } from "react";
-import { getMinScreenScale } from "@/plugins/screen.fitter";
+import {useEffect, useState} from "react";
+import {getMinScreenScale} from "@/plugins/screen.fitter";
 
 export default function HomePage7() {
     const [topPos, setTopPos] = useState(560);
@@ -22,28 +22,6 @@ export default function HomePage7() {
 
     return (
         <>
-            {/* <div
-          className={mainStyle.containerFullPage}
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div
-            className={panelStyle.panelContainer}
-            style={{
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <div
-              className={panelStyle.panelCircleContainer}
-              style={{
-                background: "#383e3a",
-              }}
-            ></div>
-          </div>
-        </div> */}
             <div
                 style={{
                     display: "flex",
