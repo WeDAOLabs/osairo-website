@@ -1,6 +1,7 @@
 import PageFitter from "../page-fitter/page-fitter";
 import FigmaImage from "@/components/figma-image/figma-image";
 import pageStyle from "@/components/home2/page.module.css";
+import Resources from "@/components/resources/resources";
 
 export default function HomePage4() {
     return (
@@ -22,6 +23,8 @@ export default function HomePage4() {
                                     name={"txt-title"}/>
                         <FigmaImage figmaX={6221} figmaY={2108} figmaW={1440} figmaH={900} homepageNumber={4}
                                     name={"decorate-bottom"}/>
+
+                        <Resources/>
                     </div>
                 </div>
             </PageFitter>
