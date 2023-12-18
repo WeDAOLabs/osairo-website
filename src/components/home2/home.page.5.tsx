@@ -1,8 +1,19 @@
 import PageFitter from "../page-fitter/page-fitter";
 import pageStyle from "@/components/home2/page.module.css";
 import FigmaImage from "@/components/figma-image/figma-image";
+import FigmaFont from "@/components/figma-font/figma-font";
 
 export default function HomePage5() {
+
+    const Text = {
+        textTitle0: "Q4 2023",
+        textTitle1: "Q1-Q2 2024",
+        textTitle2: "Q3-Q4 2024",
+        text0: "Recruitment of buildersWebsite and game development",
+        text1: "NFT Sale",
+        text2: "Game LaunchCommunity management activities",
+    }
+
     return (
         <>
             <PageFitter>
@@ -32,6 +43,37 @@ export default function HomePage5() {
                                     name={"decorate1"}/>
                         <FigmaImage figmaX={7173} figmaY={3493} figmaW={338} figmaH={338} homepageNumber={5}
                                     name={"decorate2"}/>
+
+                        <FigmaFont figmaX={6332} figmaY={3253} figmaW={216} homepageNumber={5}
+                                   fontFamily={"Pilat Extended"} fontWeight={900} fontSize={50}
+                                   figmaFillColor={"#FFFFFF"}
+                                   value={Text.textTitle0}/>
+
+                        <FigmaFont figmaX={6760} figmaY={3262} figmaW={244} homepageNumber={5}
+                                   fontFamily={"Pilat Extended"} fontWeight={900} fontSize={50}
+                                   figmaFillColor={"#FFFFFF"}
+                                   value={Text.textTitle1}/>
+
+                        <FigmaFont figmaX={7195} figmaY={3262} figmaW={241} homepageNumber={5}
+                                   fontFamily={"Pilat Extended"} fontWeight={900} fontSize={50}
+                                   figmaFillColor={"#FFFFFF"}
+                                   value={Text.textTitle2}/>
+
+                        <FigmaFont figmaX={6332} figmaY={3399} figmaW={291} homepageNumber={5}
+                                   fontFamily={"Pilat Extended"} fontWeight={600} fontSize={20}
+                                   figmaFillColor={"#FFFFFF"}
+                                   value={Text.text0}/>
+
+                        <FigmaFont figmaX={6755} figmaY={3399} figmaW={125} homepageNumber={5}
+                                   fontFamily={"Pilat Extended"} fontWeight={600} fontSize={20}
+                                   figmaFillColor={"#FFFFFF"}
+                                   value={Text.text1}/>
+
+                        <FigmaFont figmaX={7190} figmaY={3399} figmaW={305} homepageNumber={5}
+                                   fontFamily={"Pilat Extended"} fontWeight={600} fontSize={20}
+                                   figmaFillColor={"#FFFFFF"}
+                                   value={Text.text2}/>
+
                     </div>
                 </div>
             </PageFitter>
