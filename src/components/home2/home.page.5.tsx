@@ -1,169 +1,82 @@
-"use client";
-import mainStyle from "@/styles/main.module.css";
-import panelStyle from "./page.module.css";
 import PageFitter from "../page-fitter/page-fitter";
-import TxtMenuItem from "../txt-menu/txt-menu-item";
-import { LINK_DISCORD } from "@/const/game";
-import { useEffect, useState } from "react";
-import { EventBus } from "@/plugins/event.bus";
-import { EventPageSlide } from "@/events/event.page.slide";
-import { getMinScreenScale } from "@/plugins/screen.fitter";
+import pageStyle from "@/components/home2/page.module.css";
+import FigmaImage from "@/components/figma-image/figma-image";
+import FigmaFont from "@/components/figma-font/figma-font";
 
 export default function HomePage5() {
-  const [topPos, setTopPos] = useState(0);
 
-  const onPushSwiperSlide = (idx: any) => {
-    if (idx <= 5) {
-      setTopPos(0);
-    } else {
-      let scale = getMinScreenScale();
-
-      setTopPos(560 * Math.min(1, scale));
+    const Text = {
+        textTitle0: "Q4 2023",
+        textTitle1: "Q1-Q2 2024",
+        textTitle2: "Q3-Q4 2024",
+        text0: "Recruitment of buildersWebsite and game development",
+        text1: "NFT Sale",
+        text2: "Game LaunchCommunity management activities",
     }
-  };
 
-  useEffect(() => {
-    EventBus.instance.on(EventPageSlide.event, onPushSwiperSlide);
+    return (
+        <>
+            <PageFitter>
+                <div className={`${pageStyle.outerContainer}`}>
+                    <div className={`${pageStyle.innerContainer}`}>
+                        <FigmaImage figmaX={6221} figmaY={2985} figmaW={1440} figmaH={900} homepageNumber={5}
+                                    name={"background-color"}/>
+                        <FigmaImage figmaX={6221} figmaY={3008} figmaW={1440} figmaH={900} homepageNumber={5}
+                                    name={"background"}/>
+                        <FigmaImage figmaX={6872} figmaY={3059} figmaW={137} figmaH={156} homepageNumber={5}
+                                    name={"decorate-tree"}/>
+                        <FigmaImage figmaX={6781} figmaY={3143} figmaW={321} figmaH={65} homepageNumber={5}
+                                    name={"txt-title"}/>
+                        <FigmaImage figmaX={7661 - 1440} figmaY={3093 - 85} figmaW={1440} figmaH={85} homepageNumber={5}
+                                    name={"decorate-mask-top"}/>
+                        <FigmaImage figmaX={6221} figmaY={3823} figmaW={1440} figmaH={85} homepageNumber={5}
+                                    name={"decorate-mask-bottom"}/>
+                        <FigmaImage figmaX={6305} figmaY={3236} figmaW={346} figmaH={520} homepageNumber={5}
+                                    name={"material-rectangle"}/>
+                        <FigmaImage figmaX={6734} figmaY={3236} figmaW={346} figmaH={520} homepageNumber={5}
+                                    name={"material-rectangle"}/>
+                        <FigmaImage figmaX={7169} figmaY={3236} figmaW={346} figmaH={520} homepageNumber={5}
+                                    name={"material-rectangle"}/>
+                        <FigmaImage figmaX={6308} figmaY={3503} figmaW={338} figmaH={338} homepageNumber={5}
+                                    name={"decorate0"}/>
+                        <FigmaImage figmaX={6734} figmaY={3493} figmaW={338} figmaH={338} homepageNumber={5}
+                                    name={"decorate1"}/>
+                        <FigmaImage figmaX={7173} figmaY={3493} figmaW={338} figmaH={338} homepageNumber={5}
+                                    name={"decorate2"}/>
 
-    return () => {
-      EventBus.instance.off(EventPageSlide.event, onPushSwiperSlide);
-    };
-  }, []);
+                        <FigmaFont figmaX={6332} figmaY={3253} figmaW={216} homepageNumber={5}
+                                   fontFamily={"Pilat Extended"} fontWeight={900} fontSize={50}
+                                   figmaFillColor={"#FFFFFF"}
+                                   value={Text.textTitle0}/>
 
-  return (
-    <>
-      <div
-        className={mainStyle.containerFullPage}
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-          position: "absolute",
-          width: "100vw",
-          left: 0,
-          top: topPos,
-        }}
-      >
-        <PageFitter>
-          <div
-            className={panelStyle.panelContainer}
-            style={{
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <div
-              className={panelStyle.panelCircleContainer}
-              style={{
-                background: "#c4e4ce",
-                display: "flex",
-              }}
-            >
-              <div
-                className="hp5-page-left"
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  flex: "44%",
-                  maxWidth: "44%",
-                }}
-              >
-                <div
-                  style={{
-                    width: 460,
-                    height: 642,
-                    background: "#3e4b41",
-                    borderRadius: 30,
-                    position: "relative",
-                  }}
-                >
-                  <label
-                    style={{
-                      position: "absolute",
-                      width: 415,
-                      height: 170,
-                      fontFamily: "Arial Black",
-                      fontStyle: "normal",
-                      fontWeight: 900,
-                      fontSize: 60,
-                      color: "white",
-                      left: 45,
-                      top: 25,
-                    }}
-                  >
-                    You’re early
-                  </label>
-                  <text
-                    style={{
-                      position: "absolute",
-                      width: 377.68,
-                      height: 294,
+                        <FigmaFont figmaX={6760} figmaY={3262} figmaW={244} homepageNumber={5}
+                                   fontFamily={"Pilat Extended"} fontWeight={900} fontSize={50}
+                                   figmaFillColor={"#FFFFFF"}
+                                   value={Text.textTitle1}/>
 
-                      fontFamily: "Arial Hebrew",
-                      fontStyle: "normal",
-                      fontWeight: 700,
-                      fontSize: 30,
+                        <FigmaFont figmaX={7195} figmaY={3262} figmaW={241} homepageNumber={5}
+                                   fontFamily={"Pilat Extended"} fontWeight={900} fontSize={50}
+                                   figmaFillColor={"#FFFFFF"}
+                                   value={Text.textTitle2}/>
 
-                      color: "white",
+                        <FigmaFont figmaX={6332} figmaY={3399} figmaW={291} homepageNumber={5}
+                                   fontFamily={"Pilat Extended"} fontWeight={600} fontSize={20}
+                                   figmaFillColor={"#FFFFFF"}
+                                   value={Text.text0}/>
 
-                      left: 39,
-                      top: 204,
-                    }}
-                  >
-                    Join the Osairo social community today. Be one of the
-                    earliest contributors, together creating automated world.
-                  </text>
-                  <div
-                    style={{
-                      position: "absolute",
-                      left: 55.3,
-                      top: 540,
-                    }}
-                  >
-                    <TxtMenuItem
-                      txt="JOIN OSAIRO"
-                      txtColor="#3e4b41"
-                      bgColor="white"
-                      onClick={() => {
-                        window.open(LINK_DISCORD, "_blank");
-                      }}
-                    />
-                  </div>
+                        <FigmaFont figmaX={6755} figmaY={3399} figmaW={125} homepageNumber={5}
+                                   fontFamily={"Pilat Extended"} fontWeight={600} fontSize={20}
+                                   figmaFillColor={"#FFFFFF"}
+                                   value={Text.text1}/>
+
+                        <FigmaFont figmaX={7190} figmaY={3399} figmaW={305} homepageNumber={5}
+                                   fontFamily={"Pilat Extended"} fontWeight={600} fontSize={20}
+                                   figmaFillColor={"#FFFFFF"}
+                                   value={Text.text2}/>
+
+                    </div>
                 </div>
-              </div>
-              <div
-                className="hp5-page-right"
-                style={{
-                  // display: "flex",
-                  // justifyContent: "center",
-                  // alignItems: "center",
-                  flex: "56%",
-                  maxWidth: "56%",
-                  position: "relative",
-                }}
-              >
-                <text
-                  style={{
-                    position: "absolute",
-                    width: 542.36,
-                    height: 170,
-                    fontFamily: "Arial Black",
-                    fontStyle: "normal",
-                    fontWeight: 900,
-                    fontSize: 60,
-                    color: "white",
-
-                    top: 65,
-                    left: 60,
-                  }}
-                >
-                  Welcome to our community
-                </text>
-              </div>
-            </div>
-          </div>
-        </PageFitter>
-      </div>
-    </>
-  );
+            </PageFitter>
+        </>
+    );
 }

@@ -8,20 +8,28 @@ export default function HomePage3() {
             <PageFitter>
                 <div className={`${pageStyle.outerContainer}`}>
                     <div className={`${pageStyle.innerContainer}`}>
-                        <FigmaImage figmaX={6220} figmaY={2107} figmaW={1440} figmaH={900} homepageNumber={3}
+                        <FigmaImage figmaX={6220} figmaY={1207} figmaW={1440} figmaH={900} homepageNumber={3}
                                     name={"background-color"}/>
-                        <FigmaImage figmaX={6221} figmaY={2107} figmaW={1440} figmaH={959} homepageNumber={3}
+                        <FigmaImage figmaX={6220} figmaY={1206} figmaW={1440} figmaH={900} homepageNumber={3}
                                     name={"background"}/>
-                        <FigmaImage figmaX={6872} figmaY={2133} figmaW={137} figmaH={156} homepageNumber={3}
+                        <FigmaImage figmaX={6403} figmaY={1788} figmaW={1060} figmaH={321} homepageNumber={3}
+                                    name={"txt-background"}/>
+                        <FigmaImage figmaX={6872} figmaY={1232} figmaW={137} figmaH={156} homepageNumber={3}
                                     name={"decorate-tree"}/>
-                        <FigmaImage figmaX={6351} figmaY={2247} figmaW={1179} figmaH={721} homepageNumber={3}
-                                    name={"decorate-scroll"}/>
-                        <FigmaImage figmaX={6269} figmaY={2819} figmaW={281} figmaH={179} homepageNumber={3}
-                                    name={"decorate-conch-left"}/>
-                        <FigmaImage figmaX={7329} figmaY={2806} figmaW={281} figmaH={179} homepageNumber={3}
-                                    name={"decorate-conch-right"}/>
-                        <FigmaImage figmaX={6489} figmaY={2215} figmaW={919} figmaH={65} homepageNumber={3}
+                        <FigmaImage figmaX={6601} figmaY={1314} figmaW={703} figmaH={55} homepageNumber={3}
                                     name={"txt-title"}/>
+                        <FigmaImage figmaX={7028} figmaY={1380} figmaW={565} figmaH={581} homepageNumber={3}
+                                    name={"decorate-coin"}/>
+                        <FigmaImage figmaX={7660 - 1440} figmaY={1294 - 85} figmaW={1440} figmaH={85} homepageNumber={3}
+                                    name={"decorate-mask-top"}/>
+                        <FigmaImage figmaX={6220} figmaY={2022} figmaW={1440} figmaH={85} homepageNumber={3}
+                                    name={"decorate-mask-bottom"}/>
+                        <FigmaImage figmaX={6325} figmaY={1522} figmaW={726} figmaH={243} homepageNumber={3}
+                                    name={"txt-description0"}/>
+                        <FigmaImage figmaX={6325} figmaY={1533} figmaW={726} figmaH={192} homepageNumber={3}
+                                    name={"txt-description1"}/>
+                        <FigmaImage figmaX={6325} figmaY={1609} figmaW={726} figmaH={192} homepageNumber={3}
+                                    name={"txt-description2"}/>
                     </div>
                 </div>
             </PageFitter>

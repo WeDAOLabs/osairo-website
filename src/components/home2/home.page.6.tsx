@@ -1,228 +1,100 @@
-// import mainStyle from "@/styles/main.module.css";
-import panelStyle from "./page.module.css";
 import PageFitter from "../page-fitter/page-fitter";
-import Image from "next/image";
-import {
-    LINK_DISCORD,
-    LINK_GITHUB,
-    LINK_WHITEPAPER,
-    LINK_X,
-} from "@/const/game";
-import { useEffect, useState } from "react";
-import { getMinScreenScale } from "@/plugins/screen.fitter";
+import pageStyle from "@/components/home2/page.module.css";
+import FigmaImage from "@/components/figma-image/figma-image";
+import {useEffect, useState} from "react";
+import {getMinScreenScale} from "@/plugins/screen.fitter";
+import {EventBus} from "@/plugins/event.bus";
+import {EventPageSlide} from "@/events/event.page.slide";
+import FigmaFont from "@/components/figma-font/figma-font";
+import TxtMenuItem from "@/components/txt-menu/txt-menu-item";
+import {toast} from "react-toastify";
 
 export default function HomePage6() {
-    const [topPos, setTopPos] = useState(560);
-    const [scale, setScale] = useState(1);
+
+    const [topPos, setTopPos] = useState(0);
+
+    const onPushSwiperSlide = (idx: any) => {
+        if (idx <= 6) {
+            setTopPos(0);
+        } else {
+            let scale = getMinScreenScale();
+
+            setTopPos(560 * Math.min(1, scale));
+        }
+    };
 
     useEffect(() => {
-        setTopPos(560 * Math.min(1, getMinScreenScale()));
-        setScale(getMinScreenScale());
+        EventBus.instance.on(EventPageSlide.event, onPushSwiperSlide);
+
+        return () => {
+            EventBus.instance.off(EventPageSlide.event, onPushSwiperSlide);
+        };
     }, []);
+
+    const Text = {
+        text0: "Welcome to our community",
+        text1: "You’re early",
+        text2: "Join the Osairo social community today. Be one of the earliest contributors, together creating automated world.",
+    }
 
     return (
         <>
-            {/* <div
-          className={mainStyle.containerFullPage}
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div
-            className={panelStyle.panelContainer}
-            style={{
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <div
-              className={panelStyle.panelCircleContainer}
-              style={{
-                background: "#383e3a",
-              }}
-            ></div>
-          </div>
-        </div> */}
             <div
                 style={{
                     display: "flex",
-                    height: topPos,
-                    position: "absolute",
-                    top: topPos,
-                    left: 0,
-                    width: "100vw",
-                    alignItems: "center",
+                    height: "100%",
                     justifyContent: "center",
-                }}
-            >
+                    alignItems: "center",
+                    position: "absolute",
+                    width: "100vw",
+                    left: 0,
+                    top: topPos,
+                }}>
                 <PageFitter>
-                    <div
-                        style={{
-                            width: 1420,
-                            height: 560,
-                            position: "relative",
-                        }}
-                    >
-                        <text
-                            style={{
-                                position: "absolute",
-                                width: 654,
-                                height: 170,
+                    <div className={`${pageStyle.outerContainer}`}>
+                        <div className={`${pageStyle.innerContainer}`}>
+                            <FigmaImage figmaX={6221} figmaY={3908} figmaW={1440} figmaH={900} homepageNumber={6}
+                                        name={"background-color"}/>
+                            <FigmaImage figmaX={6221} figmaY={3908} figmaW={1440} figmaH={900} homepageNumber={6}
+                                        name={"background"}/>
+                            <FigmaImage figmaX={7661 - 1440} figmaY={4128 - 220} figmaW={1440} figmaH={220}
+                                        homepageNumber={6}
+                                        name={"decorate-mask-top"}/>
 
-                                fontFamily: "Pilat Extended",
-                                fontStyle: "normal",
-                                fontWeight: 900,
-                                fontSize: 60,
+                            <FigmaFont figmaX={6322} figmaY={4336} figmaW={1082} homepageNumber={6}
+                                       fontFamily={"Pilat Extended"} fontWeight={900} fontSize={60}
+                                       figmaFillColor={["#4181E8", "#12ABC5"]}
+                                       figmaStrokeColor={"#FFFFFF"} figmaStrokeWidth={3}
+                                       value={Text.text0}/>
 
-                                color: "#FFEBBB",
+                            <FigmaFont figmaX={6322} figmaY={4424} figmaW={466} homepageNumber={6}
+                                       fontFamily={"Pilat Extended"} fontWeight={900} fontSize={40}
+                                       figmaFillColor={["#4181E8", "#12ABC5"]}
+                                       figmaStrokeColor={"#FFFFFF"} figmaStrokeWidth={2}
+                                       value={Text.text1}/>
 
-                                left: 97,
-                                top: 46 * scale,
-                            }}
-                        >
-                            Osairo Adventure game
-                        </text>
-                        <Image
-                            src="/logo-big.png"
-                            width={226.5}
-                            height={111}
-                            alt="osairo"
-                            style={{
-                                position: "absolute",
-                                top: 329 * scale - 100,
-                                left: 1178,
-                            }}
-                        />
-                        <div
-                            className="learn-more"
-                            style={{
-                                position: "absolute",
-                                width: 215,
-                                height: 122,
-                                left: 97,
-                                top: 328 * scale - 100,
-                                display: "flex",
-                                flexDirection: "column",
-                            }}
-                        >
-                            <label
+                            <FigmaFont figmaX={6323} figmaY={4485} figmaW={790} homepageNumber={6}
+                                       fontFamily={"Pilat Extended"} fontWeight={900} fontSize={30}
+                                       figmaFillColor={["#4181E8", "#C74BF2"]}
+                                       value={Text.text2}/>
+
+                            <div
                                 style={{
-                                    width: 215,
-                                    height: 10,
-
-                                    fontFamily: "Pilat Extended",
-                                    fontStyle: "normal",
-                                    fontWeight: 400,
-                                    fontSize: 14,
-
-                                    color: "#AFB2B0",
-                                }}
-                            >
-                                Learn More
-                            </label>
-                            <label
-                                className={panelStyle.labelWithLink}
-                                style={{
-                                    width: 215,
-                                    height: 30,
-
-                                    fontFamily: "Pilat Extended",
-                                    fontStyle: "normal",
-                                    fontWeight: 400,
-                                    fontSize: 26,
-                                    color: "white",
-
-                                    marginTop: 15,
-                                    marginLeft: -4,
-                                }}
-                                onClick={() => window.open(LINK_GITHUB, "_blank")}
-                            >
-                                GitHub
-                            </label>
-                            <label
-                                className={panelStyle.labelWithLink}
-                                style={{
-                                    width: 215,
-                                    height: 30,
-
-                                    fontFamily: "Pilat Extended",
-                                    fontStyle: "normal",
-                                    fontWeight: 400,
-                                    fontSize: 26,
-                                    color: "white",
-                                    marginTop: 6,
-                                    marginLeft: -4,
-                                }}
-                                onClick={() => window.open(LINK_WHITEPAPER, "_blank")}
-                            >
-                                Whitepaper
-                            </label>
-                        </div>
-                        <div
-                            className="follow-us"
-                            style={{
-                                position: "absolute",
-                                width: 93,
-                                height: 79,
-                                left: 312,
-                                top: 328 * scale - 100,
-                                display: "flex",
-                                flexDirection: "column",
-                            }}
-                        >
-                            <label
-                                style={{
-                                    width: 215,
-                                    height: 10,
-
-                                    fontFamily: "Pilat Extended",
-                                    fontStyle: "normal",
-                                    fontWeight: 400,
-                                    fontSize: 14,
-
-                                    color: "#AFB2B0",
-                                }}
-                            >
-                                Follow Us
-                            </label>
-                            <label
-                                className={panelStyle.labelWithLink}
-                                style={{
-                                    width: 215,
-                                    height: 30,
-
-                                    fontFamily: "Pilat Extended",
-                                    fontStyle: "normal",
-                                    fontWeight: 400,
-                                    fontSize: 26,
-                                    color: "white",
-
-                                    marginTop: 15,
-                                    marginLeft: -4,
-                                }}
-                                onClick={() => window.open(LINK_DISCORD, "_blank")}
-                            >
-                                Discord
-                            </label>
-                            <label
-                                className={panelStyle.labelWithLink}
-                                style={{
-                                    width: 215,
-                                    height: 30,
-
-                                    fontFamily: "Pilat Extended",
-                                    fontStyle: "normal",
-                                    fontWeight: 400,
-                                    fontSize: 26,
-                                    color: "white",
-                                    marginTop: 6,
-                                    marginLeft: -4,
-                                }}
-                                onClick={() => window.open(LINK_X, "_blank")}
-                            >
-                                Twitter
-                            </label>
+                                    position: "absolute",
+                                    left: 101,
+                                    top: 783,
+                                }}>
+                                <TxtMenuItem
+                                    txt="Join Us"
+                                    fontFamily="Pilat Extended Bold"
+                                    fontSize={16}
+                                    bgColor={'#FFE19A'}
+                                    txtColor={"#212324"}
+                                    onClick={() => {
+                                        toast.info("coming soon!");
+                                    }}
+                                />
+                            </div>
                         </div>
                     </div>
                 </PageFitter>

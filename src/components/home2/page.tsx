@@ -12,6 +12,7 @@ import HomePage3 from "./home.page.3";
 import HomePage4 from "./home.page.4";
 import HomePage5 from "./home.page.5";
 import HomePage6 from "./home.page.6";
+import HomePage7 from "./home.page.7";
 import TitleBar from "@/components/title-bar/title-bar";
 import { EventBus } from "@/plugins/event.bus";
 import { EventPageSlide } from "@/events/event.page.slide";
@@ -92,6 +93,9 @@ export default function Home() {
         </SwiperSlide>
         <SwiperSlide>
           <HomePage6 />
+        </SwiperSlide>
+        <SwiperSlide>
+          <HomePage7 />
         </SwiperSlide>
       </Swiper>
       <TitleBar />

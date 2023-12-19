@@ -7,7 +7,6 @@ export interface IFigmaImageProps {
     figmaH: number;         // figma中H的数值
     homepageNumber: number; // 第几页(用于src与计算相对位置)
     name: string;           // 图片名称(用于alt与src)
-
 }
 
 export default function FigmaImage(props: IFigmaImageProps) {
@@ -21,7 +20,7 @@ export default function FigmaImage(props: IFigmaImageProps) {
                 style={{
                     position: "absolute",
                     left: props.figmaX - 6220,
-                    top: props.figmaY - props.homepageNumber * 900 - (-594),
+                    top: props.figmaY - props.homepageNumber * 900 - (-1495),
                 }}
             />
         </>

@@ -29,7 +29,7 @@ export default function TitleMenuItem(props: ITitleMenuItem) {
             width: "100%",
             height: 40,
             borderRadius: 50,
-            background: "#322e21",
+            background: "#292821",
             position: "absolute",
             display: props.selected ? "" : "none",
           }}
