@@ -2,8 +2,14 @@ import PageFitter from "../page-fitter/page-fitter";
 import FigmaImage from "@/components/figma-image/figma-image";
 import pageStyle from "@/components/home2/page.module.css";
 import Resources from "@/components/resources/resources";
+import FigmaFont from "@/components/figma-font/figma-font";
 
 export default function HomePage4() {
+
+    const Text = {
+        textTitle: "Island Resources",
+    }
+
     return (
         <>
             <PageFitter>
@@ -19,10 +25,14 @@ export default function HomePage4() {
                                     name={"decorate-tree"}/>
                         <FigmaImage figmaX={6388} figmaY={2271} figmaW={1090} figmaH={666} homepageNumber={4}
                                     name={"decorate-scroll"}/>
-                        <FigmaImage figmaX={6656} figmaY={2214} figmaW={572} figmaH={65} homepageNumber={4}
-                                    name={"txt-title"}/>
                         <FigmaImage figmaX={6221} figmaY={2108} figmaW={1440} figmaH={900} homepageNumber={4}
                                     name={"decorate-bottom"}/>
+
+                        <FigmaFont figmaX={6656} figmaY={2214} figmaW={572} homepageNumber={4}
+                                   fontFamily={"Pilat Extended Bold"} fontWeight={1000} fontSize={50}
+                                   figmaFillColor={["#5850FF", "#FF52FF"]}
+                                   figmaStrokeColor={"#FFFFFF"} figmaStrokeWidth={4}
+                                   value={Text.textTitle}/>
 
                         <Resources/>
                     </div>

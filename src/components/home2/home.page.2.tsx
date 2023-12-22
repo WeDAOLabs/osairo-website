@@ -5,8 +5,14 @@ import CustomSwiper from "@/components/custom-swiper/custom-swiper";
 import {toast} from "react-toastify";
 import pageStyle from "@/components/home2/page.module.css";
 import mainStyle from "@/styles/main.module.css";
+import FigmaFont from "@/components/figma-font/figma-font";
 
 export default function HomePage2() {
+
+    const Text = {
+        textTitle: "LAND NFT",
+    }
+
     return (
         <>
             <PageFitter>
@@ -24,10 +30,15 @@ export default function HomePage2() {
                                     name={"decorate-starfish"}/>
                         <FigmaImage figmaX={6872} figmaY={331} figmaW={137} figmaH={156} homepageNumber={2}
                                     name={"decorate-tree"}/>
-                        <FigmaImage figmaX={6729} figmaY={410} figmaW={397} figmaH={55} homepageNumber={2}
-                                    name={"txt-title"}/>
                         <FigmaImage figmaX={6220} figmaY={1121} figmaW={1440} figmaH={85} homepageNumber={2}
                                     name={"decorate-mask-bottom"}/>
+
+                        <FigmaFont figmaX={6729} figmaY={410} figmaW={397} homepageNumber={2}
+                                   fontFamily={"Pilat Extended Bold"} fontWeight={1000} fontSize={50}
+                                   figmaFillColor={["#5850FF", "#FF52FF"]}
+                                   figmaStrokeColor={"#FFFFFF"} figmaStrokeWidth={4}
+                                   value={Text.textTitle}/>
+
                         <CustomSwiper/>
                         <div
                             className={`right-bottom ${mainStyle.flexCenter}`}

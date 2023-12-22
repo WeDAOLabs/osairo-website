@@ -1,8 +1,13 @@
 import pageStyle from "./page.module.css";
 import PageFitter from "../page-fitter/page-fitter";
 import FigmaImage from "@/components/figma-image/figma-image";
+import FigmaFont from "@/components/figma-font/figma-font";
 
 export default function HomePage1() {
+
+    const Text = {
+        textTitle: "EARN",
+    }
 
     return (
         <>
@@ -19,12 +24,16 @@ export default function HomePage1() {
                                     name={"decorate-mask-top"}/>
                         <FigmaImage figmaX={6220} figmaY={217} figmaW={1440} figmaH={85} homepageNumber={1}
                                     name={"decorate-mask-bottom"}/>
-                        <FigmaImage figmaX={6831} figmaY={-303} figmaW={219} figmaH={55} homepageNumber={1}
-                                    name={"txt-title"}/>
                         <FigmaImage figmaX={6316} figmaY={-194} figmaW={1277} figmaH={427} homepageNumber={1}
                                     name={"material"}/>
                         <FigmaImage figmaX={6887} figmaY={-240} figmaW={71} figmaH={71} homepageNumber={1}
                                     name={"decorate0"}/>
+
+                        <FigmaFont figmaX={6831} figmaY={-304} figmaW={219} homepageNumber={1}
+                                   fontFamily={"Pilat Extended Bold"} fontWeight={1000} fontSize={50}
+                                   figmaFillColor={["#5850FF", "#FF52FF"]}
+                                   figmaStrokeColor={"#FFFFFF"} figmaStrokeWidth={4}
+                                   value={Text.textTitle}/>
                     </div>
                 </div>
             </PageFitter>

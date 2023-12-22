@@ -62,19 +62,19 @@ export default function HomePage6() {
                                         name={"decorate-mask-top"}/>
 
                             <FigmaFont figmaX={6322} figmaY={4336} figmaW={1082} homepageNumber={6}
-                                       fontFamily={"Pilat Extended"} fontWeight={900} fontSize={60}
+                                       fontFamily={"Pilat Extended Bold"} fontWeight={1000} fontSize={60}
                                        figmaFillColor={["#4181E8", "#12ABC5"]}
                                        figmaStrokeColor={"#FFFFFF"} figmaStrokeWidth={3}
                                        value={Text.text0}/>
 
                             <FigmaFont figmaX={6322} figmaY={4424} figmaW={466} homepageNumber={6}
-                                       fontFamily={"Pilat Extended"} fontWeight={900} fontSize={40}
+                                       fontFamily={"Pilat Extended Bold"} fontWeight={1000} fontSize={40}
                                        figmaFillColor={["#4181E8", "#12ABC5"]}
                                        figmaStrokeColor={"#FFFFFF"} figmaStrokeWidth={2}
                                        value={Text.text1}/>
 
                             <FigmaFont figmaX={6323} figmaY={4485} figmaW={790} homepageNumber={6}
-                                       fontFamily={"Pilat Extended"} fontWeight={900} fontSize={30}
+                                       fontFamily={"Pilat Extended Demi"} fontWeight={1000} fontSize={30}
                                        figmaFillColor={["#4181E8", "#C74BF2"]}
                                        value={Text.text2}/>
 
