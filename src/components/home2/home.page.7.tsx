@@ -32,6 +32,7 @@ export default function HomePage7() {
                     width: "100vw",
                     alignItems: "center",
                     justifyContent: "center",
+                    backgroundColor: "#212324",
                 }}
             >
                 <PageFitter>

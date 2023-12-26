@@ -36,20 +36,24 @@
     left: 3%;
     width: 94%;
     height: 94%;
-    background-color: rgba(55, 76, 107, 0.5); /* 这里是你的颜色和透明度 */
+    background-color: rgba(55, 76, 107, 0.5);
 }
 
-.SwiperSlideNftType {
+.SwiperSlideNftTypeDiv {
     position: absolute;
-    text-align: center;
-    color: #FFFFFF;
     z-index: 1000;
-    font-size: 20px;
-    font-family: "Pilat Extended", "Pilat Extended Demi", serif;
     bottom: -5%;
-    left: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    text-align: center;
 }
 
+.SwiperSlideNftTypeText {
+    font-size: 20px;
+    font-family: "Pilat Extended Demi", serif;
+    color: #FFFFFF;
+}
 
 .swiperPaginationContainer {
     position: absolute !important;
