@@ -13,7 +13,6 @@ import SwiperStyle from "@/components/custom-swiper/swiper.module.css"
 export interface ICustomSwiper {
 }
 
-
 const pagination = {
     el: ".swiper-pagination",
     clickable: true,
@@ -21,7 +20,6 @@ const pagination = {
         return '<span class="' + className + '"> </span>';
     },
 };
-
 
 const TileImages = [
     {
@@ -44,6 +42,27 @@ const TileImages = [
         width: 676 / 2,
         height: 762 / 2,
         onClick: () => toast.info("coming soon!"),
+    },
+    {
+        src: "/assets/swiper/tile3.png",
+        nftType: "ocean",
+        width: 962 / 2,
+        height: 942 / 2,
+        onClick: () => toast.info("coming soon!"),
+    },
+    {
+        src: "/assets/swiper/tile4.png",
+        nftType: "lake",
+        width: 962 / 2,
+        height: 942 / 2,
+        onClick: () => toast.info("coming soon!"),
+    },
+    {
+        src: "/assets/swiper/tile5.png",
+        nftType: "marsh",
+        width: 962 / 2,
+        height: 942 / 2,
+        onClick: () => toast.info("coming soon!"),
     }
 ];
 
@@ -51,12 +70,11 @@ export default function CustomSwiper(props: ICustomSwiper) {
 
     const [activeIndex, setActiveIndex] = useState(0);
 
-
     return (
         <>
             <Swiper className={`${SwiperStyle.swiperContainer}`}
                     effect={`coverflow`}
-                    initialSlide={1}
+                    initialSlide={2}
                     onSlideChange={(swiper) => {
                         setActiveIndex(swiper.activeIndex);
                     }}
@@ -66,7 +84,7 @@ export default function CustomSwiper(props: ICustomSwiper) {
                     coverflowEffect={{
                         rotate: 0,
                         stretch: 0,
-                        depth: 400,
+                        depth: 700,
                         modifier: 1,
                         slideShadows: true,
                     }}
