@@ -22,7 +22,8 @@ body {
     padding: 0;
     height: 100%;
     position: relative;
-    background: #212324;
+    /*background: #212324;*/
+    background: #E7FCFA;
 }
 
 @font-face {

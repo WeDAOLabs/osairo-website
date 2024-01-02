@@ -19,7 +19,9 @@ export default function CustomSwiperSlide(props: ICustomSwiperSlide) {
         return (
             <>
                 <div className={`${SwiperStyle.SwiperSlideContainer}`}>
-                    <p className={`${SwiperStyle.SwiperSlideNftType}`}>NFT Type : {props.nftType}</p>
+                    <div className={`${SwiperStyle.SwiperSlideNftTypeDiv}`}>
+                        <p className={`${SwiperStyle.SwiperSlideNftTypeText}`}>NFT Type : {props.nftType}</p>
+                    </div>
                     <Image className={`${SwiperStyle.SwiperSlideImage}`}
                            alt="land nft"
                            src={props.src}
