@@ -1,0 +1,26 @@
+.txtMenuItem {
+  position: relative;
+
+  width: 180px;
+  height: 58px;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  transition: transform 0.3s;
+  transform: scale(1);
+}
+
+.txtMenuItem:hover {
+  transform: scale(1.1);
+}
+
+.txtMenuItemLabel {
+  font-family: 'Arial Hebrew';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+
+  cursor: pointer;
+}

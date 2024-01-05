@@ -1,0 +1,21 @@
+.titleMenuItemStyle {
+  position: relative;
+  width: 144px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuLabelStyle {
+  font-family: "Pilat Extended Demi";
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  color: #322e21;
+  cursor: pointer;
+}
+
+.menuLabelStyleSelected {
+  color: #FFF8CB
+}

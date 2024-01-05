@@ -1,0 +1,19 @@
+.panelContainer {
+  width: 1440px;
+  height: 900px;
+  position: relative;
+}
+
+.panelCircleContainer {
+  width: 1420px;
+  height: 900px;
+  border-radius: 30px;
+}
+
+.labelWithLink {
+  cursor: pointer;
+}
+
+.labelWithLink:hover {
+  text-decoration: underline;
+}

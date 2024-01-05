@@ -1,0 +1,62 @@
+.swiperContainer {
+    position: absolute;
+    left: 269px;
+    top: 216px;
+    width: 901px;
+    height: 507px;
+}
+
+.SwiperSlideContainer {
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 363px;
+    height: 409px;
+    border: 1px solid #B3DAEC;
+}
+
+.SwiperSlideImage {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    width: 94%;
+    height: 100%;
+}
+
+.SwiperSlideImage2 {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    width: 94%;
+    height: 94%;
+}
+
+.SwiperSlideImageMask {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    width: 94%;
+    height: 94%;
+    background-color: rgba(55, 76, 107, 0.5);
+}
+
+.SwiperSlideNftTypeDiv {
+    position: absolute;
+    z-index: 1000;
+    bottom: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    text-align: center;
+}
+
+.SwiperSlideNftTypeText {
+    font-size: 20px;
+    font-family: "Pilat Extended Demi", serif;
+    color: #FFFFFF;
+}
+
+.swiperPaginationContainer {
+    position: absolute !important;
+    top: 700px !important;
+    height: 30px !important;
+}

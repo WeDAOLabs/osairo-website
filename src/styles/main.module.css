@@ -1,4 +1,16 @@
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .alignCenter {
   justify-content: center;
   align-items: center;
+}
+
+.containerFullPage {
+  display: flex;
+  /* height: 100vh; */
+  height: 100%;
 }
